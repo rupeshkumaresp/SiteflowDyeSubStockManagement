@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SiteFlowModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tDyeSubConsumption">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DyeSubID" Type="int" Nullable="false" />
+          <Property Name="Consumed" Type="int" />
+          <Property Name="ConsumedDateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tDyeSubStock">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PartNumber" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="SubstrateName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ESPSize" Type="nvarchar(max)" />
+          <Property Name="Colour" Type="nvarchar(max)" />
+          <Property Name="CATSStockName" Type="nvarchar(max)" />
+          <Property Name="Price$" Type="decimal" Precision="16" Scale="3" />
+          <Property Name="PriceGBP" Type="decimal" Precision="16" Scale="3" />
+          <Property Name="QuantityAvailable" Type="int" />
+          <Property Name="AddToQuantitiy" Type="int" />
+          <Property Name="Spoilage" Type="int" />
+          <Property Name="DOA" Type="int" />
+          <Property Name="TotalConsumed" Type="int" />
+          <Property Name="Jan" Type="int" />
+          <Property Name="Feb" Type="int" />
+          <Property Name="March" Type="int" />
+          <Property Name="April" Type="int" />
+          <Property Name="May" Type="int" />
+          <Property Name="June" Type="int" />
+          <Property Name="July" Type="int" />
+          <Property Name="August" Type="int" />
+          <Property Name="Sept" Type="int" />
+          <Property Name="Oct" Type="int" />
+          <Property Name="Nov" Type="int" />
+          <Property Name="Dec" Type="int" />
+        </EntityType>
+        <EntityType Name="tDyeSubStocksV2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Stock Name" Type="nvarchar(max)" />
+          <Property Name="Stock Type" Type="nvarchar(max)" />
+          <Property Name="Stock Category" Type="nvarchar(max)" />
+          <Property Name="Substrate Name" Type="nvarchar(max)" />
+          <Property Name="Sizes" Type="nvarchar(max)" />
+          <Property Name="Colours" Type="nvarchar(max)" />
+          <Property Name="Weeks Limit Req." Type="nvarchar(max)" />
+          <Property Name="Weeks Left" Type="nvarchar(max)" />
+          <Property Name="ESP Stock" Type="nvarchar(max)" />
+          <Property Name="CATs Stock" Type="nvarchar(max)" />
+          <Property Name="Live Stock" Type="nvarchar(max)" />
+          <Property Name="Spoilage" Type="nvarchar(max)" />
+          <Property Name="DOA" Type="nvarchar(max)" />
+          <Property Name="Add to Spoilage" Type="nvarchar(max)" />
+          <Property Name="Add to DOA" Type="nvarchar(max)" />
+          <Property Name="Highest Week" Type="nvarchar(max)" />
+          <Property Name="WK1" Type="nvarchar(max)" />
+          <Property Name="WK2" Type="nvarchar(max)" />
+          <Property Name="WK3" Type="nvarchar(max)" />
+          <Property Name="WK4" Type="nvarchar(max)" />
+          <Property Name="WK5" Type="nvarchar(max)" />
+          <Property Name="WK6" Type="nvarchar(max)" />
+          <Property Name="WK7" Type="nvarchar(max)" />
+          <Property Name="WK8" Type="nvarchar(max)" />
+          <Property Name="WK9" Type="nvarchar(max)" />
+          <Property Name="WK10" Type="nvarchar(max)" />
+          <Property Name="WK11" Type="nvarchar(max)" />
+          <Property Name="WK12" Type="nvarchar(max)" />
+          <Property Name="WK13" Type="nvarchar(max)" />
+          <Property Name="WK14" Type="nvarchar(max)" />
+          <Property Name="WK15" Type="nvarchar(max)" />
+          <Property Name="WK16" Type="nvarchar(max)" />
+          <Property Name="WK17" Type="nvarchar(max)" />
+          <Property Name="WK18" Type="nvarchar(max)" />
+          <Property Name="WK19" Type="nvarchar(max)" />
+          <Property Name="WK20" Type="nvarchar(max)" />
+          <Property Name="WK21" Type="nvarchar(max)" />
+          <Property Name="WK22" Type="nvarchar(max)" />
+          <Property Name="WK23" Type="nvarchar(max)" />
+          <Property Name="WK24" Type="nvarchar(max)" />
+          <Property Name="WK25" Type="nvarchar(max)" />
+          <Property Name="WK26" Type="nvarchar(max)" />
+          <Property Name="WK27" Type="nvarchar(max)" />
+          <Property Name="WK28" Type="nvarchar(max)" />
+          <Property Name="WK29" Type="nvarchar(max)" />
+          <Property Name="WK30" Type="nvarchar(max)" />
+          <Property Name="WK31" Type="nvarchar(max)" />
+          <Property Name="WK32" Type="nvarchar(max)" />
+          <Property Name="WK33" Type="nvarchar(max)" />
+          <Property Name="WK34" Type="nvarchar(max)" />
+          <Property Name="WK35" Type="nvarchar(max)" />
+          <Property Name="WK36" Type="nvarchar(max)" />
+          <Property Name="WK37" Type="nvarchar(max)" />
+          <Property Name="WK38" Type="nvarchar(max)" />
+          <Property Name="WK39" Type="nvarchar(max)" />
+          <Property Name="WK40" Type="nvarchar(max)" />
+          <Property Name="WK41" Type="nvarchar(max)" />
+          <Property Name="WK42" Type="nvarchar(max)" />
+          <Property Name="WK43" Type="nvarchar(max)" />
+          <Property Name="WK44" Type="nvarchar(max)" />
+          <Property Name="WK45" Type="nvarchar(max)" />
+          <Property Name="WK46" Type="nvarchar(max)" />
+          <Property Name="WK47" Type="nvarchar(max)" />
+          <Property Name="WK48" Type="nvarchar(max)" />
+          <Property Name="WK49" Type="nvarchar(max)" />
+          <Property Name="WK50" Type="nvarchar(max)" />
+          <Property Name="WK51" Type="nvarchar(max)" />
+          <Property Name="WK52" Type="nvarchar(max)" />
+          <Property Name="YEAR" Type="int" Nullable="false" />
+          <Property Name="Yearly Total" Type="nvarchar(max)" />
+          <Property Name="Stock Available External" Type="nvarchar(max)" />
+          <Property Name="External Supplier" Type="nvarchar(max)" />
+          <Property Name="Unit Cost" Type="nvarchar(max)" />
+          <Property Name="Value of Stock in House" Type="nvarchar(max)" />
+          <Property Name="Component 1" Type="nvarchar(max)" />
+          <Property Name="Component 1 Qty" Type="nvarchar(max)" />
+          <Property Name="Component 2" Type="nvarchar(max)" />
+          <Property Name="Component 2 Qty" Type="nvarchar(max)" />
+          <Property Name="Component 3" Type="nvarchar(max)" />
+          <Property Name="Component 3 Qty" Type="nvarchar(max)" />
+          <Property Name="Component 4" Type="nvarchar(max)" />
+          <Property Name="Component 4 Qty" Type="nvarchar(max)" />
+          <Property Name="Component 5" Type="nvarchar(max)" />
+          <Property Name="Component 5 Qty" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tSiteFlowInputData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SourceOrderId" Type="nvarchar(max)" />
+          <Property Name="SKU" Type="nvarchar(max)" />
+          <Property Name="ComponentsBarcode" Type="nvarchar(max)" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Components0Substrate" Type="nvarchar(max)" />
+          <Property Name="Components1Substrate" Type="nvarchar(max)" />
+          <Property Name="Components0SizeForImpo" Type="nvarchar(max)" />
+          <Property Name="Components1SizeForImpo" Type="nvarchar(max)" />
+          <Property Name="Components0ProductFinishedPageSize" Type="nvarchar(max)" />
+          <Property Name="Components1ProductFinishedPageSize" Type="nvarchar(max)" />
+          <Property Name="Components0Pages" Type="int" />
+          <Property Name="Components1Pages" Type="int" />
+          <Property Name="Components0CoverType" Type="nvarchar(max)" />
+          <Property Name="Components1CoverType" Type="nvarchar(max)" />
+          <Property Name="Components0StockCoverType" Type="nvarchar(max)" />
+          <Property Name="Components1StockCoverType" Type="nvarchar(max)" />
+          <Property Name="Components0Extra" Type="nvarchar(max)" />
+          <Property Name="Components1Extra" Type="nvarchar(max)" />
+          <Property Name="ComponentsColour" Type="nvarchar(max)" />
+          <Property Name="ComponentsRibbon" Type="nvarchar(max)" />
+          <Property Name="Components0Country" Type="nvarchar(max)" />
+          <Property Name="Components1Country" Type="nvarchar(max)" />
+          <Property Name="Components0ArtworkUrl" Type="nvarchar(max)" />
+          <Property Name="Components1ArtworkUrl" Type="nvarchar(max)" />
+          <Property Name="Account" Type="nvarchar(max)" />
+          <Property Name="OrderStatus" Type="nvarchar(max)" />
+          <Property Name="OrderDateTime" Type="datetime" />
+          <Property Name="EmailProcessedDateTime" Type="datetime" />
+          <Property Name="ShippedDate" Type="datetime" />
+          <Property Name="PDFDownloaded" Type="bit" />
+          <Property Name="IsValidArtwork" Type="bit" />
+          <Property Name="DiscardDownload" Type="bit" />
+          <Property Name="InvalidUrlTryCount" Type="int" />
+          <Property Name="PDFMerged" Type="bit" />
+          <Property Name="MergeProcessingDateTime" Type="datetime" />
+          <Property Name="CalculatedPDFSize" Type="nvarchar(max)" />
+          <Property Name="PDFPageCount" Type="int" />
+          <Property Name="DownloadedArtworkPDF" Type="nvarchar(max)" />
+          <Property Name="JsonData" Type="nvarchar(max)" />
+          <Property Name="InvalidEmailSent" Type="bit" />
+          <Property Name="RUSH" Type="nvarchar(max)" />
+          <Property Name="SLADate" Type="datetime" />
+          <Property Name="PrintReadyDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SiteFlow.dbo.tSiteFlowInputData_AUDIT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tSiteFlowInputData_AUDIT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="SourceOrderId" Type="nvarchar(max)" />
+          <Property Name="SKU" Type="nvarchar(max)" />
+          <Property Name="ComponentsBarcode" Type="nvarchar(max)" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Components0Substrate" Type="nvarchar(max)" />
+          <Property Name="Components1Substrate" Type="nvarchar(max)" />
+          <Property Name="Components0SizeForImpo" Type="nvarchar(max)" />
+          <Property Name="Components1SizeForImpo" Type="nvarchar(max)" />
+          <Property Name="Components0ProductFinishedPageSize" Type="nvarchar(max)" />
+          <Property Name="Components1ProductFinishedPageSize" Type="nvarchar(max)" />
+          <Property Name="Components0Pages" Type="int" />
+          <Property Name="Components1Pages" Type="int" />
+          <Property Name="Components0CoverType" Type="nvarchar(max)" />
+          <Property Name="Components1CoverType" Type="nvarchar(max)" />
+          <Property Name="Components0StockCoverType" Type="nvarchar(max)" />
+          <Property Name="Components1StockCoverType" Type="nvarchar(max)" />
+          <Property Name="Components0Extra" Type="nvarchar(max)" />
+          <Property Name="Components1Extra" Type="nvarchar(max)" />
+          <Property Name="ComponentsColour" Type="nvarchar(max)" />
+          <Property Name="ComponentsRibbon" Type="nvarchar(max)" />
+          <Property Name="Components0Country" Type="nvarchar(max)" />
+          <Property Name="Components1Country" Type="nvarchar(max)" />
+          <Property Name="Components0ArtworkUrl" Type="nvarchar(max)" />
+          <Property Name="Components1ArtworkUrl" Type="nvarchar(max)" />
+          <Property Name="Account" Type="nvarchar(max)" />
+          <Property Name="OrderStatus" Type="nvarchar(max)" />
+          <Property Name="OrderDateTime" Type="datetime" />
+          <Property Name="EmailProcessedDateTime" Type="datetime" />
+          <Property Name="ShippedDate" Type="datetime" />
+          <Property Name="PDFDownloaded" Type="bit" />
+          <Property Name="IsValidArtwork" Type="bit" />
+          <Property Name="DiscardDownload" Type="bit" />
+          <Property Name="InvalidUrlTryCount" Type="int" />
+          <Property Name="PDFMerged" Type="bit" />
+          <Property Name="MergeProcessingDateTime" Type="datetime" />
+          <Property Name="CalculatedPDFSize" Type="nvarchar(max)" />
+          <Property Name="PDFPageCount" Type="int" />
+          <Property Name="DownloadedArtworkPDF" Type="nvarchar(max)" />
+          <Property Name="JsonData" Type="nvarchar(max)" />
+          <Property Name="InvalidEmailSent" Type="bit" />
+          <Property Name="RUSH" Type="nvarchar(max)" />
+          <Property Name="SLADate" Type="datetime" />
+          <Property Name="PrintReadyDate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_tDyeSubConsumption_tDyeSubStock">
+          <End Role="tDyeSubStock" Type="Self.tDyeSubStock" Multiplicity="1" />
+          <End Role="tDyeSubConsumption" Type="Self.tDyeSubConsumption" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDyeSubStock">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tDyeSubConsumption">
+              <PropertyRef Name="DyeSubID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SiteFlowModelStoreContainer">
+          <EntitySet Name="tDyeSubConsumption" EntityType="Self.tDyeSubConsumption" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tDyeSubStock" EntityType="Self.tDyeSubStock" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tDyeSubStocksV2" EntityType="Self.tDyeSubStocksV2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tSiteFlowInputData" EntityType="Self.tSiteFlowInputData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tSiteFlowInputData_AUDIT" EntityType="Self.tSiteFlowInputData_AUDIT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tSiteFlowInputData_AUDIT].[ID] AS [ID], 
+    [tSiteFlowInputData_AUDIT].[SourceOrderId] AS [SourceOrderId], 
+    [tSiteFlowInputData_AUDIT].[SKU] AS [SKU], 
+    [tSiteFlowInputData_AUDIT].[ComponentsBarcode] AS [ComponentsBarcode], 
+    [tSiteFlowInputData_AUDIT].[Quantity] AS [Quantity], 
+    [tSiteFlowInputData_AUDIT].[Components0Substrate] AS [Components0Substrate], 
+    [tSiteFlowInputData_AUDIT].[Components1Substrate] AS [Components1Substrate], 
+    [tSiteFlowInputData_AUDIT].[Components0SizeForImpo] AS [Components0SizeForImpo], 
+    [tSiteFlowInputData_AUDIT].[Components1SizeForImpo] AS [Components1SizeForImpo], 
+    [tSiteFlowInputData_AUDIT].[Components0ProductFinishedPageSize] AS [Components0ProductFinishedPageSize], 
+    [tSiteFlowInputData_AUDIT].[Components1ProductFinishedPageSize] AS [Components1ProductFinishedPageSize], 
+    [tSiteFlowInputData_AUDIT].[Components0Pages] AS [Components0Pages], 
+    [tSiteFlowInputData_AUDIT].[Components1Pages] AS [Components1Pages], 
+    [tSiteFlowInputData_AUDIT].[Components0CoverType] AS [Components0CoverType], 
+    [tSiteFlowInputData_AUDIT].[Components1CoverType] AS [Components1CoverType], 
+    [tSiteFlowInputData_AUDIT].[Components0StockCoverType] AS [Components0StockCoverType], 
+    [tSiteFlowInputData_AUDIT].[Components1StockCoverType] AS [Components1StockCoverType], 
+    [tSiteFlowInputData_AUDIT].[Components0Extra] AS [Components0Extra], 
+    [tSiteFlowInputData_AUDIT].[Components1Extra] AS [Components1Extra], 
+    [tSiteFlowInputData_AUDIT].[ComponentsColour] AS [ComponentsColour], 
+    [tSiteFlowInputData_AUDIT].[ComponentsRibbon] AS [ComponentsRibbon], 
+    [tSiteFlowInputData_AUDIT].[Components0Country] AS [Components0Country], 
+    [tSiteFlowInputData_AUDIT].[Components1Country] AS [Components1Country], 
+    [tSiteFlowInputData_AUDIT].[Components0ArtworkUrl] AS [Components0ArtworkUrl], 
+    [tSiteFlowInputData_AUDIT].[Components1ArtworkUrl] AS [Components1ArtworkUrl], 
+    [tSiteFlowInputData_AUDIT].[Account] AS [Account], 
+    [tSiteFlowInputData_AUDIT].[OrderStatus] AS [OrderStatus], 
+    [tSiteFlowInputData_AUDIT].[OrderDateTime] AS [OrderDateTime], 
+    [tSiteFlowInputData_AUDIT].[EmailProcessedDateTime] AS [EmailProcessedDateTime], 
+    [tSiteFlowInputData_AUDIT].[ShippedDate] AS [ShippedDate], 
+    [tSiteFlowInputData_AUDIT].[PDFDownloaded] AS [PDFDownloaded], 
+    [tSiteFlowInputData_AUDIT].[IsValidArtwork] AS [IsValidArtwork], 
+    [tSiteFlowInputData_AUDIT].[DiscardDownload] AS [DiscardDownload], 
+    [tSiteFlowInputData_AUDIT].[InvalidUrlTryCount] AS [InvalidUrlTryCount], 
+    [tSiteFlowInputData_AUDIT].[PDFMerged] AS [PDFMerged], 
+    [tSiteFlowInputData_AUDIT].[MergeProcessingDateTime] AS [MergeProcessingDateTime], 
+    [tSiteFlowInputData_AUDIT].[CalculatedPDFSize] AS [CalculatedPDFSize], 
+    [tSiteFlowInputData_AUDIT].[PDFPageCount] AS [PDFPageCount], 
+    [tSiteFlowInputData_AUDIT].[DownloadedArtworkPDF] AS [DownloadedArtworkPDF], 
+    [tSiteFlowInputData_AUDIT].[JsonData] AS [JsonData], 
+    [tSiteFlowInputData_AUDIT].[InvalidEmailSent] AS [InvalidEmailSent], 
+    [tSiteFlowInputData_AUDIT].[RUSH] AS [RUSH], 
+    [tSiteFlowInputData_AUDIT].[SLADate] AS [SLADate], 
+    [tSiteFlowInputData_AUDIT].[PrintReadyDate] AS [PrintReadyDate]
+    FROM [dbo].[tSiteFlowInputData_AUDIT] AS [tSiteFlowInputData_AUDIT]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_tDyeSubConsumption_tDyeSubStock" Association="Self.FK_tDyeSubConsumption_tDyeSubStock">
+            <End Role="tDyeSubStock" EntitySet="tDyeSubStock" />
+            <End Role="tDyeSubConsumption" EntitySet="tDyeSubConsumption" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SiteFlowModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SiteFlowEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tDyeSubConsumption" EntityType="SiteFlowModel.tDyeSubConsumption" />
+          <EntitySet Name="tDyeSubStock" EntityType="SiteFlowModel.tDyeSubStock" />
+          <EntitySet Name="tSiteFlowInputData" EntityType="SiteFlowModel.tSiteFlowInputData" />
+          <EntitySet Name="tSiteFlowInputData_AUDIT" EntityType="SiteFlowModel.tSiteFlowInputData_AUDIT" />
+          <AssociationSet Name="FK_tDyeSubConsumption_tDyeSubStock" Association="SiteFlowModel.FK_tDyeSubConsumption_tDyeSubStock">
+            <End Role="tDyeSubStock" EntitySet="tDyeSubStock" />
+            <End Role="tDyeSubConsumption" EntitySet="tDyeSubConsumption" />
+          </AssociationSet>
+          <EntitySet Name="tDyeSubStocksV2" EntityType="SiteFlowModel.tDyeSubStocksV2" />
+        </EntityContainer>
+        <EntityType Name="tDyeSubConsumption">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DyeSubID" Type="Int32" Nullable="false" />
+          <Property Name="Consumed" Type="Int32" />
+          <Property Name="ConsumedDateTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tDyeSubStock" Relationship="SiteFlowModel.FK_tDyeSubConsumption_tDyeSubStock" FromRole="tDyeSubConsumption" ToRole="tDyeSubStock" />
+        </EntityType>
+        <EntityType Name="tDyeSubStock">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PartNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubstrateName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ESPSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Colour" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CATSStockName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Price_" Type="Decimal" Precision="16" Scale="3" />
+          <Property Name="PriceGBP" Type="Decimal" Precision="16" Scale="3" />
+          <Property Name="QuantityAvailable" Type="Int32" />
+          <Property Name="AddToQuantitiy" Type="Int32" />
+          <Property Name="Spoilage" Type="Int32" />
+          <Property Name="DOA" Type="Int32" />
+          <Property Name="TotalConsumed" Type="Int32" />
+          <Property Name="Jan" Type="Int32" />
+          <Property Name="Feb" Type="Int32" />
+          <Property Name="March" Type="Int32" />
+          <Property Name="April" Type="Int32" />
+          <Property Name="May" Type="Int32" />
+          <Property Name="June" Type="Int32" />
+          <Property Name="July" Type="Int32" />
+          <Property Name="August" Type="Int32" />
+          <Property Name="Sept" Type="Int32" />
+          <Property Name="Oct" Type="Int32" />
+          <Property Name="Nov" Type="Int32" />
+          <Property Name="Dec" Type="Int32" />
+          <NavigationProperty Name="tDyeSubConsumption" Relationship="SiteFlowModel.FK_tDyeSubConsumption_tDyeSubStock" FromRole="tDyeSubStock" ToRole="tDyeSubConsumption" />
+        </EntityType>
+        <EntityType Name="tSiteFlowInputData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SourceOrderId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SKU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ComponentsBarcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Components0Substrate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1Substrate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0SizeForImpo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1SizeForImpo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0ProductFinishedPageSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1ProductFinishedPageSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0Pages" Type="Int32" />
+          <Property Name="Components1Pages" Type="Int32" />
+          <Property Name="Components0CoverType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1CoverType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0StockCoverType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1StockCoverType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0Extra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1Extra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ComponentsColour" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ComponentsRibbon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0ArtworkUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1ArtworkUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Account" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrderStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrderDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EmailProcessedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+          <Property Name="PDFDownloaded" Type="Boolean" />
+          <Property Name="IsValidArtwork" Type="Boolean" />
+          <Property Name="DiscardDownload" Type="Boolean" />
+          <Property Name="InvalidUrlTryCount" Type="Int32" />
+          <Property Name="PDFMerged" Type="Boolean" />
+          <Property Name="MergeProcessingDateTime" Type="DateTime" Precision="3" />
+          <Property Name="CalculatedPDFSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PDFPageCount" Type="Int32" />
+          <Property Name="DownloadedArtworkPDF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="JsonData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InvalidEmailSent" Type="Boolean" />
+          <Property Name="RUSH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SLADate" Type="DateTime" Precision="3" />
+          <Property Name="PrintReadyDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tSiteFlowInputData_AUDIT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="SourceOrderId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SKU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ComponentsBarcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Components0Substrate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1Substrate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0SizeForImpo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1SizeForImpo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0ProductFinishedPageSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1ProductFinishedPageSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0Pages" Type="Int32" />
+          <Property Name="Components1Pages" Type="Int32" />
+          <Property Name="Components0CoverType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1CoverType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0StockCoverType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1StockCoverType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0Extra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1Extra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ComponentsColour" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ComponentsRibbon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components0ArtworkUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Components1ArtworkUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Account" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrderStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrderDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EmailProcessedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+          <Property Name="PDFDownloaded" Type="Boolean" />
+          <Property Name="IsValidArtwork" Type="Boolean" />
+          <Property Name="DiscardDownload" Type="Boolean" />
+          <Property Name="InvalidUrlTryCount" Type="Int32" />
+          <Property Name="PDFMerged" Type="Boolean" />
+          <Property Name="MergeProcessingDateTime" Type="DateTime" Precision="3" />
+          <Property Name="CalculatedPDFSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PDFPageCount" Type="Int32" />
+          <Property Name="DownloadedArtworkPDF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="JsonData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InvalidEmailSent" Type="Boolean" />
+          <Property Name="RUSH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SLADate" Type="DateTime" Precision="3" />
+          <Property Name="PrintReadyDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="FK_tDyeSubConsumption_tDyeSubStock">
+          <End Type="SiteFlowModel.tDyeSubStock" Role="tDyeSubStock" Multiplicity="1" />
+          <End Type="SiteFlowModel.tDyeSubConsumption" Role="tDyeSubConsumption" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDyeSubStock">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tDyeSubConsumption">
+              <PropertyRef Name="DyeSubID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tDyeSubStocksV2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Stock_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Stock_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Stock_Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Substrate_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sizes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Colours" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Weeks_Limit_Req_" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Weeks_Left" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ESP_Stock" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CATs_Stock" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Live_Stock" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Spoilage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DOA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Add_to_Spoilage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Add_to_DOA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Highest_Week" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK21" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK22" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK23" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK24" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK25" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK26" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK27" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK28" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK29" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK30" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK31" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK32" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK33" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK34" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK35" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK36" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK37" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK38" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK39" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK40" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK41" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK42" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK43" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK44" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK45" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK46" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK47" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK48" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK49" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK50" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK51" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WK52" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YEAR" Type="Int32" Nullable="false" />
+          <Property Name="Yearly_Total" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Stock_Available_External" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="External_Supplier" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_Cost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Value_of_Stock_in_House" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_1_Qty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_2_Qty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_3_Qty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_4_Qty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Component_5_Qty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SiteFlowModelStoreContainer" CdmEntityContainer="SiteFlowEntities">
+          <EntitySetMapping Name="tDyeSubConsumption">
+            <EntityTypeMapping TypeName="SiteFlowModel.tDyeSubConsumption">
+              <MappingFragment StoreEntitySet="tDyeSubConsumption">
+                <ScalarProperty Name="ConsumedDateTime" ColumnName="ConsumedDateTime" />
+                <ScalarProperty Name="Consumed" ColumnName="Consumed" />
+                <ScalarProperty Name="DyeSubID" ColumnName="DyeSubID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tDyeSubStock">
+            <EntityTypeMapping TypeName="SiteFlowModel.tDyeSubStock">
+              <MappingFragment StoreEntitySet="tDyeSubStock">
+                <ScalarProperty Name="Dec" ColumnName="Dec" />
+                <ScalarProperty Name="Nov" ColumnName="Nov" />
+                <ScalarProperty Name="Oct" ColumnName="Oct" />
+                <ScalarProperty Name="Sept" ColumnName="Sept" />
+                <ScalarProperty Name="August" ColumnName="August" />
+                <ScalarProperty Name="July" ColumnName="July" />
+                <ScalarProperty Name="June" ColumnName="June" />
+                <ScalarProperty Name="May" ColumnName="May" />
+                <ScalarProperty Name="April" ColumnName="April" />
+                <ScalarProperty Name="March" ColumnName="March" />
+                <ScalarProperty Name="Feb" ColumnName="Feb" />
+                <ScalarProperty Name="Jan" ColumnName="Jan" />
+                <ScalarProperty Name="TotalConsumed" ColumnName="TotalConsumed" />
+                <ScalarProperty Name="DOA" ColumnName="DOA" />
+                <ScalarProperty Name="Spoilage" ColumnName="Spoilage" />
+                <ScalarProperty Name="AddToQuantitiy" ColumnName="AddToQuantitiy" />
+                <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+                <ScalarProperty Name="PriceGBP" ColumnName="PriceGBP" />
+                <ScalarProperty Name="Price_" ColumnName="Price$" />
+                <ScalarProperty Name="CATSStockName" ColumnName="CATSStockName" />
+                <ScalarProperty Name="Colour" ColumnName="Colour" />
+                <ScalarProperty Name="ESPSize" ColumnName="ESPSize" />
+                <ScalarProperty Name="SubstrateName" ColumnName="SubstrateName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PartNumber" ColumnName="PartNumber" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tSiteFlowInputData">
+            <EntityTypeMapping TypeName="SiteFlowModel.tSiteFlowInputData">
+              <MappingFragment StoreEntitySet="tSiteFlowInputData">
+                <ScalarProperty Name="PrintReadyDate" ColumnName="PrintReadyDate" />
+                <ScalarProperty Name="SLADate" ColumnName="SLADate" />
+                <ScalarProperty Name="RUSH" ColumnName="RUSH" />
+                <ScalarProperty Name="InvalidEmailSent" ColumnName="InvalidEmailSent" />
+                <ScalarProperty Name="JsonData" ColumnName="JsonData" />
+                <ScalarProperty Name="DownloadedArtworkPDF" ColumnName="DownloadedArtworkPDF" />
+                <ScalarProperty Name="PDFPageCount" ColumnName="PDFPageCount" />
+                <ScalarProperty Name="CalculatedPDFSize" ColumnName="CalculatedPDFSize" />
+                <ScalarProperty Name="MergeProcessingDateTime" ColumnName="MergeProcessingDateTime" />
+                <ScalarProperty Name="PDFMerged" ColumnName="PDFMerged" />
+                <ScalarProperty Name="InvalidUrlTryCount" ColumnName="InvalidUrlTryCount" />
+                <ScalarProperty Name="DiscardDownload" ColumnName="DiscardDownload" />
+                <ScalarProperty Name="IsValidArtwork" ColumnName="IsValidArtwork" />
+                <ScalarProperty Name="PDFDownloaded" ColumnName="PDFDownloaded" />
+                <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+                <ScalarProperty Name="EmailProcessedDateTime" ColumnName="EmailProcessedDateTime" />
+                <ScalarProperty Name="OrderDateTime" ColumnName="OrderDateTime" />
+                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Components1ArtworkUrl" ColumnName="Components1ArtworkUrl" />
+                <ScalarProperty Name="Components0ArtworkUrl" ColumnName="Components0ArtworkUrl" />
+                <ScalarProperty Name="Components1Country" ColumnName="Components1Country" />
+                <ScalarProperty Name="Components0Country" ColumnName="Components0Country" />
+                <ScalarProperty Name="ComponentsRibbon" ColumnName="ComponentsRibbon" />
+                <ScalarProperty Name="ComponentsColour" ColumnName="ComponentsColour" />
+                <ScalarProperty Name="Components1Extra" ColumnName="Components1Extra" />
+                <ScalarProperty Name="Components0Extra" ColumnName="Components0Extra" />
+                <ScalarProperty Name="Components1StockCoverType" ColumnName="Components1StockCoverType" />
+                <ScalarProperty Name="Components0StockCoverType" ColumnName="Components0StockCoverType" />
+                <ScalarProperty Name="Components1CoverType" ColumnName="Components1CoverType" />
+                <ScalarProperty Name="Components0CoverType" ColumnName="Components0CoverType" />
+                <ScalarProperty Name="Components1Pages" ColumnName="Components1Pages" />
+                <ScalarProperty Name="Components0Pages" ColumnName="Components0Pages" />
+                <ScalarProperty Name="Components1ProductFinishedPageSize" ColumnName="Components1ProductFinishedPageSize" />
+                <ScalarProperty Name="Components0ProductFinishedPageSize" ColumnName="Components0ProductFinishedPageSize" />
+                <ScalarProperty Name="Components1SizeForImpo" ColumnName="Components1SizeForImpo" />
+                <ScalarProperty Name="Components0SizeForImpo" ColumnName="Components0SizeForImpo" />
+                <ScalarProperty Name="Components1Substrate" ColumnName="Components1Substrate" />
+                <ScalarProperty Name="Components0Substrate" ColumnName="Components0Substrate" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ComponentsBarcode" ColumnName="ComponentsBarcode" />
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+                <ScalarProperty Name="SourceOrderId" ColumnName="SourceOrderId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tSiteFlowInputData_AUDIT">
+            <EntityTypeMapping TypeName="SiteFlowModel.tSiteFlowInputData_AUDIT">
+              <MappingFragment StoreEntitySet="tSiteFlowInputData_AUDIT">
+                <ScalarProperty Name="PrintReadyDate" ColumnName="PrintReadyDate" />
+                <ScalarProperty Name="SLADate" ColumnName="SLADate" />
+                <ScalarProperty Name="RUSH" ColumnName="RUSH" />
+                <ScalarProperty Name="InvalidEmailSent" ColumnName="InvalidEmailSent" />
+                <ScalarProperty Name="JsonData" ColumnName="JsonData" />
+                <ScalarProperty Name="DownloadedArtworkPDF" ColumnName="DownloadedArtworkPDF" />
+                <ScalarProperty Name="PDFPageCount" ColumnName="PDFPageCount" />
+                <ScalarProperty Name="CalculatedPDFSize" ColumnName="CalculatedPDFSize" />
+                <ScalarProperty Name="MergeProcessingDateTime" ColumnName="MergeProcessingDateTime" />
+                <ScalarProperty Name="PDFMerged" ColumnName="PDFMerged" />
+                <ScalarProperty Name="InvalidUrlTryCount" ColumnName="InvalidUrlTryCount" />
+                <ScalarProperty Name="DiscardDownload" ColumnName="DiscardDownload" />
+                <ScalarProperty Name="IsValidArtwork" ColumnName="IsValidArtwork" />
+                <ScalarProperty Name="PDFDownloaded" ColumnName="PDFDownloaded" />
+                <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+                <ScalarProperty Name="EmailProcessedDateTime" ColumnName="EmailProcessedDateTime" />
+                <ScalarProperty Name="OrderDateTime" ColumnName="OrderDateTime" />
+                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Components1ArtworkUrl" ColumnName="Components1ArtworkUrl" />
+                <ScalarProperty Name="Components0ArtworkUrl" ColumnName="Components0ArtworkUrl" />
+                <ScalarProperty Name="Components1Country" ColumnName="Components1Country" />
+                <ScalarProperty Name="Components0Country" ColumnName="Components0Country" />
+                <ScalarProperty Name="ComponentsRibbon" ColumnName="ComponentsRibbon" />
+                <ScalarProperty Name="ComponentsColour" ColumnName="ComponentsColour" />
+                <ScalarProperty Name="Components1Extra" ColumnName="Components1Extra" />
+                <ScalarProperty Name="Components0Extra" ColumnName="Components0Extra" />
+                <ScalarProperty Name="Components1StockCoverType" ColumnName="Components1StockCoverType" />
+                <ScalarProperty Name="Components0StockCoverType" ColumnName="Components0StockCoverType" />
+                <ScalarProperty Name="Components1CoverType" ColumnName="Components1CoverType" />
+                <ScalarProperty Name="Components0CoverType" ColumnName="Components0CoverType" />
+                <ScalarProperty Name="Components1Pages" ColumnName="Components1Pages" />
+                <ScalarProperty Name="Components0Pages" ColumnName="Components0Pages" />
+                <ScalarProperty Name="Components1ProductFinishedPageSize" ColumnName="Components1ProductFinishedPageSize" />
+                <ScalarProperty Name="Components0ProductFinishedPageSize" ColumnName="Components0ProductFinishedPageSize" />
+                <ScalarProperty Name="Components1SizeForImpo" ColumnName="Components1SizeForImpo" />
+                <ScalarProperty Name="Components0SizeForImpo" ColumnName="Components0SizeForImpo" />
+                <ScalarProperty Name="Components1Substrate" ColumnName="Components1Substrate" />
+                <ScalarProperty Name="Components0Substrate" ColumnName="Components0Substrate" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ComponentsBarcode" ColumnName="ComponentsBarcode" />
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+                <ScalarProperty Name="SourceOrderId" ColumnName="SourceOrderId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tDyeSubStocksV2">
+            <EntityTypeMapping TypeName="SiteFlowModel.tDyeSubStocksV2">
+              <MappingFragment StoreEntitySet="tDyeSubStocksV2">
+                <ScalarProperty Name="Component_5_Qty" ColumnName="Component 5 Qty" />
+                <ScalarProperty Name="Component_5" ColumnName="Component 5" />
+                <ScalarProperty Name="Component_4_Qty" ColumnName="Component 4 Qty" />
+                <ScalarProperty Name="Component_4" ColumnName="Component 4" />
+                <ScalarProperty Name="Component_3_Qty" ColumnName="Component 3 Qty" />
+                <ScalarProperty Name="Component_3" ColumnName="Component 3" />
+                <ScalarProperty Name="Component_2_Qty" ColumnName="Component 2 Qty" />
+                <ScalarProperty Name="Component_2" ColumnName="Component 2" />
+                <ScalarProperty Name="Component_1_Qty" ColumnName="Component 1 Qty" />
+                <ScalarProperty Name="Component_1" ColumnName="Component 1" />
+                <ScalarProperty Name="Value_of_Stock_in_House" ColumnName="Value of Stock in House" />
+                <ScalarProperty Name="Unit_Cost" ColumnName="Unit Cost" />
+                <ScalarProperty Name="External_Supplier" ColumnName="External Supplier" />
+                <ScalarProperty Name="Stock_Available_External" ColumnName="Stock Available External" />
+                <ScalarProperty Name="Yearly_Total" ColumnName="Yearly Total" />
+                <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+                <ScalarProperty Name="WK52" ColumnName="WK52" />
+                <ScalarProperty Name="WK51" ColumnName="WK51" />
+                <ScalarProperty Name="WK50" ColumnName="WK50" />
+                <ScalarProperty Name="WK49" ColumnName="WK49" />
+                <ScalarProperty Name="WK48" ColumnName="WK48" />
+                <ScalarProperty Name="WK47" ColumnName="WK47" />
+                <ScalarProperty Name="WK46" ColumnName="WK46" />
+                <ScalarProperty Name="WK45" ColumnName="WK45" />
+                <ScalarProperty Name="WK44" ColumnName="WK44" />
+                <ScalarProperty Name="WK43" ColumnName="WK43" />
+                <ScalarProperty Name="WK42" ColumnName="WK42" />
+                <ScalarProperty Name="WK41" ColumnName="WK41" />
+                <ScalarProperty Name="WK40" ColumnName="WK40" />
+                <ScalarProperty Name="WK39" ColumnName="WK39" />
+                <ScalarProperty Name="WK38" ColumnName="WK38" />
+                <ScalarProperty Name="WK37" ColumnName="WK37" />
+                <ScalarProperty Name="WK36" ColumnName="WK36" />
+                <ScalarProperty Name="WK35" ColumnName="WK35" />
+                <ScalarProperty Name="WK34" ColumnName="WK34" />
+                <ScalarProperty Name="WK33" ColumnName="WK33" />
+                <ScalarProperty Name="WK32" ColumnName="WK32" />
+                <ScalarProperty Name="WK31" ColumnName="WK31" />
+                <ScalarProperty Name="WK30" ColumnName="WK30" />
+                <ScalarProperty Name="WK29" ColumnName="WK29" />
+                <ScalarProperty Name="WK28" ColumnName="WK28" />
+                <ScalarProperty Name="WK27" ColumnName="WK27" />
+                <ScalarProperty Name="WK26" ColumnName="WK26" />
+                <ScalarProperty Name="WK25" ColumnName="WK25" />
+                <ScalarProperty Name="WK24" ColumnName="WK24" />
+                <ScalarProperty Name="WK23" ColumnName="WK23" />
+                <ScalarProperty Name="WK22" ColumnName="WK22" />
+                <ScalarProperty Name="WK21" ColumnName="WK21" />
+                <ScalarProperty Name="WK20" ColumnName="WK20" />
+                <ScalarProperty Name="WK19" ColumnName="WK19" />
+                <ScalarProperty Name="WK18" ColumnName="WK18" />
+                <ScalarProperty Name="WK17" ColumnName="WK17" />
+                <ScalarProperty Name="WK16" ColumnName="WK16" />
+                <ScalarProperty Name="WK15" ColumnName="WK15" />
+                <ScalarProperty Name="WK14" ColumnName="WK14" />
+                <ScalarProperty Name="WK13" ColumnName="WK13" />
+                <ScalarProperty Name="WK12" ColumnName="WK12" />
+                <ScalarProperty Name="WK11" ColumnName="WK11" />
+                <ScalarProperty Name="WK10" ColumnName="WK10" />
+                <ScalarProperty Name="WK9" ColumnName="WK9" />
+                <ScalarProperty Name="WK8" ColumnName="WK8" />
+                <ScalarProperty Name="WK7" ColumnName="WK7" />
+                <ScalarProperty Name="WK6" ColumnName="WK6" />
+                <ScalarProperty Name="WK5" ColumnName="WK5" />
+                <ScalarProperty Name="WK4" ColumnName="WK4" />
+                <ScalarProperty Name="WK3" ColumnName="WK3" />
+                <ScalarProperty Name="WK2" ColumnName="WK2" />
+                <ScalarProperty Name="WK1" ColumnName="WK1" />
+                <ScalarProperty Name="Highest_Week" ColumnName="Highest Week" />
+                <ScalarProperty Name="Add_to_DOA" ColumnName="Add to DOA" />
+                <ScalarProperty Name="Add_to_Spoilage" ColumnName="Add to Spoilage" />
+                <ScalarProperty Name="DOA" ColumnName="DOA" />
+                <ScalarProperty Name="Spoilage" ColumnName="Spoilage" />
+                <ScalarProperty Name="Live_Stock" ColumnName="Live Stock" />
+                <ScalarProperty Name="CATs_Stock" ColumnName="CATs Stock" />
+                <ScalarProperty Name="ESP_Stock" ColumnName="ESP Stock" />
+                <ScalarProperty Name="Weeks_Left" ColumnName="Weeks Left" />
+                <ScalarProperty Name="Weeks_Limit_Req_" ColumnName="Weeks Limit Req." />
+                <ScalarProperty Name="Colours" ColumnName="Colours" />
+                <ScalarProperty Name="Sizes" ColumnName="Sizes" />
+                <ScalarProperty Name="Substrate_Name" ColumnName="Substrate Name" />
+                <ScalarProperty Name="Stock_Category" ColumnName="Stock Category" />
+                <ScalarProperty Name="Stock_Type" ColumnName="Stock Type" />
+                <ScalarProperty Name="Stock_Name" ColumnName="Stock Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

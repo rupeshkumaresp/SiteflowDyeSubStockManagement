@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DyeSubStockManagement", "StockManagement\DyeSubStockManagement.csproj", "{63ADC943-0323-446A-8FDA-D70892E4B895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetReaderLibrary", "SpreadsheetReaderLibrary\SpreadsheetReaderLibrary.csproj", "{8DA411F9-662F-43CD-8FAA-10F79C532EA7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://thecolourhub.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = StockManagement\\DyeSubStockManagement.csproj
+		SccProjectName1 = StockManagement
+		SccLocalPath1 = StockManagement
+		SccProjectUniqueName2 = SpreadsheetReaderLibrary\\SpreadsheetReaderLibrary.csproj
+		SccProjectName2 = SpreadsheetReaderLibrary
+		SccLocalPath2 = SpreadsheetReaderLibrary
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63ADC943-0323-446A-8FDA-D70892E4B895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63ADC943-0323-446A-8FDA-D70892E4B895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63ADC943-0323-446A-8FDA-D70892E4B895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63ADC943-0323-446A-8FDA-D70892E4B895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA411F9-662F-43CD-8FAA-10F79C532EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA411F9-662F-43CD-8FAA-10F79C532EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA411F9-662F-43CD-8FAA-10F79C532EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA411F9-662F-43CD-8FAA-10F79C532EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
