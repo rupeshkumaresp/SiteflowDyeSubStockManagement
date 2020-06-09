@@ -40,12 +40,12 @@ namespace nsDyeSubStockManagement
 
             if (this.lblStatusDownload.InvokeRequired)
             {
-                this.lblStatusDownload.BeginInvoke((MethodInvoker)delegate() { this.lblStatusDownload.Text = "Report Generation is in progress, please wait...."; ; ;});
+                this.lblStatusDownload.BeginInvoke((MethodInvoker)delegate () { this.lblStatusDownload.Text = "Report Generation is in progress, please wait...."; ; ; });
             }
 
             if (this.btnDownload.InvokeRequired)
             {
-                this.btnDownload.BeginInvoke((MethodInvoker)delegate() { this.btnDownload.Enabled = false; ; ;});
+                this.btnDownload.BeginInvoke((MethodInvoker)delegate () { this.btnDownload.Enabled = false; ; ; });
             }
 
             bool exception = false;
@@ -61,13 +61,13 @@ namespace nsDyeSubStockManagement
 
                 if (this.lblStatusDownload.InvokeRequired)
                 {
-                    this.lblStatusDownload.BeginInvoke((MethodInvoker)delegate() { this.lblStatusDownload.Text = "Report Generation failed: " + ex.Message; ; ;});
-                    this.lblStatus.BeginInvoke((MethodInvoker)delegate() { this.lblStatusDownload.ForeColor = Color.Green; ; ;});
+                    this.lblStatusDownload.BeginInvoke((MethodInvoker)delegate () { this.lblStatusDownload.Text = "Report Generation failed: " + ex.Message; ; ; });
+                    this.lblStatus.BeginInvoke((MethodInvoker)delegate () { this.lblStatusDownload.ForeColor = Color.Green; ; ; });
                 }
 
                 if (this.btnDownload.InvokeRequired)
                 {
-                    this.btnDownload.BeginInvoke((MethodInvoker)delegate() { this.btnDownload.Enabled = true; ; ;});
+                    this.btnDownload.BeginInvoke((MethodInvoker)delegate () { this.btnDownload.Enabled = true; ; ; });
                 }
                 return;
             }
@@ -75,12 +75,12 @@ namespace nsDyeSubStockManagement
             {
                 if (this.lblStatusDownload.InvokeRequired)
                 {
-                    this.lblStatusDownload.BeginInvoke((MethodInvoker)delegate() { this.lblStatusDownload.Text = "Report Generation is complete, launching report xlsx..."; ; ;});
+                    this.lblStatusDownload.BeginInvoke((MethodInvoker)delegate () { this.lblStatusDownload.Text = "Report Generation is complete, launching report xlsx..."; ; ; });
                 }
 
                 if (this.btnDownload.InvokeRequired)
                 {
-                    this.btnDownload.BeginInvoke((MethodInvoker)delegate() { this.btnDownload.Enabled = true; ; ;});
+                    this.btnDownload.BeginInvoke((MethodInvoker)delegate () { this.btnDownload.Enabled = true; ; ; });
                 }
             }
         }
@@ -95,8 +95,6 @@ namespace nsDyeSubStockManagement
                 txtBoxOutput.Text = file;
                 FileStream fs = File.OpenRead(file);
                 _inputStream = fs;
-
-
             }
 
         }
@@ -108,7 +106,7 @@ namespace nsDyeSubStockManagement
             {
                 if (this.lblStatus.InvokeRequired)
                 {
-                    this.lblStatus.BeginInvoke((MethodInvoker)delegate() { this.lblStatus.Text = "Upload is in progress, please wait..."; ; ;});
+                    this.lblStatus.BeginInvoke((MethodInvoker)delegate () { this.lblStatus.Text = "Upload is in progress, please wait..."; ; ; });
                 }
 
                 var data = ImportSpreadsheet.Import(_inputStream);
@@ -123,7 +121,18 @@ namespace nsDyeSubStockManagement
                     var sizes = row["Sizes".ToLower()];
                     var colours = row["Colours".ToLower()];
                     var weeksLimitReq = row["Weeks Limit Req.".ToLower()];
-                    var WeeksLeft = row["Weeks Left".ToLower()];
+                    var WeeksLeft = "0";
+
+
+                    try
+                    {
+                        WeeksLeft = Convert.ToString(Math.Round(Convert.ToDecimal(row["Weeks Left".ToLower()])));
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
+
 
                     var espStock = row["ESP Stock".ToLower()];
                     var catsStock = row["CATs Stock".ToLower()];
@@ -204,13 +213,13 @@ namespace nsDyeSubStockManagement
                     var Component4Qty = row["Component 4 Qty".ToLower()];
                     var Component5 = row["Component 5".ToLower()];
                     var Component5Qty = row["Component 5 Qty".ToLower()];
-                    
+
 
                     //var Spoilage = row["Spoilage".ToLower()];
                     //var DOA = row["DOA".ToLower()];
                     //var TotalConsumed = row["Total Consumed".ToLower()];
 
-                    var stock = ctx.tDyeSubStocksV2.FirstOrDefault(s => s.Stock_Name == stockName&& s.Stock_Type== stockType&& s.Stock_Category== stockCategory&& s.Substrate_Name== substrateName);
+                    var stock = ctx.tDyeSubStocksV2.FirstOrDefault(s => s.Stock_Name == stockName && s.Stock_Type == stockType && s.Stock_Category == stockCategory && s.Substrate_Name == substrateName);
 
                     if (stock == null)
                     {
@@ -252,7 +261,7 @@ namespace nsDyeSubStockManagement
                             stock.WK19 = wk19;
                             stock.WK20 = wk20;
                             stock.WK21 = wk21;
-                            stock.WK22 = wk22; 
+                            stock.WK22 = wk22;
                             stock.WK23 = wk23;
                             stock.WK24 = wk24;
                             stock.WK25 = wk25;
@@ -324,11 +333,11 @@ namespace nsDyeSubStockManagement
                         {
                             if (spoilageQty < 0)
                             {
-                                stock.Spoilage = Convert.ToString( Convert.ToInt32(stock.Spoilage) + spoilageQty);
+                                stock.Spoilage = Convert.ToString(Convert.ToInt32(stock.Spoilage) + spoilageQty);
                             }
                             else
                             {
-                                stock.Spoilage = Convert.ToString( Convert.ToInt32(stock.Spoilage) + spoilageQty);
+                                stock.Spoilage = Convert.ToString(Convert.ToInt32(stock.Spoilage) + spoilageQty);
                                 //stock.QuantityAvailable = (stock.QuantityAvailable != null ? stock.QuantityAvailable - spoilageQty : -spoilageQty);
                             }
                             updated = true;
@@ -344,15 +353,15 @@ namespace nsDyeSubStockManagement
 
                         if (conversion)
                         {
-                            stock.DOA = Convert.ToString( Convert.ToInt32(stock.DOA) + doaQTy);
+                            stock.DOA = Convert.ToString(Convert.ToInt32(stock.DOA) + doaQTy);
 
                             if (doaQTy < 0)
                             {
-                                stock.DOA = Convert.ToString( Convert.ToInt32(stock.DOA) + doaQTy);
+                                stock.DOA = Convert.ToString(Convert.ToInt32(stock.DOA) + doaQTy);
                             }
                             else
                             {
-                                stock.DOA = Convert.ToString( Convert.ToInt32(stock.DOA) + doaQTy);
+                                stock.DOA = Convert.ToString(Convert.ToInt32(stock.DOA) + doaQTy);
                                 //stock.QuantityAvailable = (stock.QuantityAvailable != null ? stock.QuantityAvailable - doaQTy : -doaQTy);
                             }
                             updated = true;
@@ -367,18 +376,18 @@ namespace nsDyeSubStockManagement
 
                 if (this.lblStatus.InvokeRequired)
                 {
-                    this.lblStatus.BeginInvoke((MethodInvoker)delegate() { this.lblStatus.Text = "Upload completed successfully!"; ; ;});
-                    this.lblStatus.BeginInvoke((MethodInvoker)delegate() { this.lblStatus.ForeColor = Color.Green; ; ;});
+                    this.lblStatus.BeginInvoke((MethodInvoker)delegate () { this.lblStatus.Text = "Upload completed successfully!"; ; ; });
+                    this.lblStatus.BeginInvoke((MethodInvoker)delegate () { this.lblStatus.ForeColor = Color.Green; ; ; });
                 }
 
                 if (this.btnUpload.InvokeRequired)
                 {
-                    this.btnUpload.BeginInvoke((MethodInvoker)delegate() { this.btnUpload.Enabled = true; ; ;});
+                    this.btnUpload.BeginInvoke((MethodInvoker)delegate () { this.btnUpload.Enabled = true; ; ; });
                 }
 
                 if (this.btnBrowse.InvokeRequired)
                 {
-                    this.btnBrowse.BeginInvoke((MethodInvoker)delegate() { this.btnBrowse.Enabled = true; ; ;});
+                    this.btnBrowse.BeginInvoke((MethodInvoker)delegate () { this.btnBrowse.Enabled = true; ; ; });
                 }
             }
             catch (Exception ex)
@@ -386,18 +395,18 @@ namespace nsDyeSubStockManagement
 
                 if (this.lblStatus.InvokeRequired)
                 {
-                    this.lblStatus.BeginInvoke((MethodInvoker)delegate() { this.lblStatus.Text = "Exception: " + ex.Message; ; ;});
-                    this.lblStatus.BeginInvoke((MethodInvoker)delegate() { this.lblStatus.ForeColor = Color.Red; ; ;});
+                    this.lblStatus.BeginInvoke((MethodInvoker)delegate () { this.lblStatus.Text = "Exception: " + ex.Message; ; ; });
+                    this.lblStatus.BeginInvoke((MethodInvoker)delegate () { this.lblStatus.ForeColor = Color.Red; ; ; });
                 }
 
                 if (this.btnUpload.InvokeRequired)
                 {
-                    this.btnUpload.BeginInvoke((MethodInvoker)delegate() { this.btnUpload.Enabled = true; ; ;});
+                    this.btnUpload.BeginInvoke((MethodInvoker)delegate () { this.btnUpload.Enabled = true; ; ; });
                 }
 
                 if (this.btnBrowse.InvokeRequired)
                 {
-                    this.btnBrowse.BeginInvoke((MethodInvoker)delegate() { this.btnBrowse.Enabled = true; ; ;});
+                    this.btnBrowse.BeginInvoke((MethodInvoker)delegate () { this.btnBrowse.Enabled = true; ; ; });
                 }
 
             }
