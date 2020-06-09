@@ -46,36 +46,53 @@ namespace nsDyeSubStockManagement
             }
 
             worksheet.Column(1).Width = 20;
-            worksheet.Column(2).Width = 52;
-            worksheet.Column(3).Width = 40;
-            worksheet.Column(4).Width = 10;
-            worksheet.Column(5).Width = 11;
-            worksheet.Column(6).Width = 18;
-            worksheet.Column(7).Width = 10;
-            worksheet.Column(8).Width = 10;
-            worksheet.Column(9).Width = 12;
-            worksheet.Column(10).Width = 12;
-            worksheet.Column(11).Width = 10;
-            worksheet.Column(12).Width = 10;
-            worksheet.Column(13).Width = 10;
-            worksheet.Column(14).Width = 12;
-            worksheet.Column(15).Width = 12;
-            worksheet.Column(16).Width = 12;
-            worksheet.Column(17).Width = 10;
-            worksheet.Column(18).Width = 10;
-            worksheet.Column(19).Width = 10;
-            worksheet.Column(20).Width = 10;
-            worksheet.Column(21).Width = 10;
-            worksheet.Column(22).Width = 12;
-            worksheet.Column(23).Width = 12;
-            worksheet.Column(24).Width = 12;
-            worksheet.Column(25).Width = 12;
-            worksheet.Column(26).Width = 12;
-            worksheet.Column(27).Width = 12;
+            worksheet.Column(2).Width = 20;
+            worksheet.Column(3).Width = 20;
+            worksheet.Column(4).Width = 40;
+            worksheet.Column(5).Width = 20;
+            worksheet.Column(6).Width = 20;
+            worksheet.Column(7).Width = 20;
+            worksheet.Column(8).Width = 15;
+            worksheet.Column(9).Width = 15;
+            worksheet.Column(10).Width = 15;
+            worksheet.Column(11).Width = 15;
+            worksheet.Column(12).Width = 15;
+            worksheet.Column(13).Width = 15;
+            worksheet.Column(14).Width = 15;
+            worksheet.Column(15).Width = 15;
+            worksheet.Column(16).Width = 15;
 
-            worksheet.Column(12).Style.Locked = false;
-            worksheet.Column(13).Style.Locked = false;
-            worksheet.Column(14).Style.Locked = false;
+            for (int i = 0; i <= 52; i++)
+            {
+                worksheet.Column(15 + i).Width = 15;
+            }
+
+            
+            worksheet.Column(69).Width = 15;
+            worksheet.Column(70).Width = 15;
+            worksheet.Column(71).Width = 30;
+            worksheet.Column(72).Width = 15;
+            worksheet.Column(73).Width = 15;
+
+            worksheet.Column(74).Width = 15;
+            worksheet.Column(75).Width = 15;
+
+            worksheet.Column(76).Width = 15;
+            worksheet.Column(77).Width = 15;
+
+            worksheet.Column(78).Width = 15;
+            worksheet.Column(79).Width = 15;
+
+            worksheet.Column(80).Width = 15;
+            worksheet.Column(81).Width = 15;
+
+            worksheet.Column(82).Width = 15;
+            worksheet.Column(83).Width = 15;
+            worksheet.Column(84).Width = 15;
+
+            //worksheet.Column(12).Style.Locked = false;
+            //worksheet.Column(13).Style.Locked = false;
+            //worksheet.Column(14).Style.Locked = false;
 
             worksheet.Protection.IsProtected = true;
 
@@ -108,10 +125,10 @@ namespace nsDyeSubStockManagement
 
 
 
-            using (new NetworkConnection(pathServerReport, new NetworkCredential(UserName, Password, domain)))
-            {
-                File.Copy(path, pathServerReport + @"\\" + name + ".xlsx");
-            }
+            //using (new NetworkConnection(pathServerReport, new NetworkCredential(UserName, Password, domain)))
+            //{
+            //    File.Copy(path, pathServerReport + @"\\" + name + ".xlsx");
+            //}
 
             System.Diagnostics.Process.Start(path);
         }
@@ -728,7 +745,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.MediumPurple);
 
             column++;
 
@@ -737,7 +754,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.MediumPurple);
 
             column++;
 
@@ -746,7 +763,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.MediumPurple);
 
             column++;
 
@@ -755,7 +772,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.MediumPurple);
 
             column++;
 
@@ -911,7 +928,7 @@ namespace nsDyeSubStockManagement
 
             for (int i = 1; i <= 52; i++)
             {
-                headerColumns.Add("WK"+i.ToString(), icount);
+                headerColumns.Add("WK" + i.ToString(), icount);
                 icount++;
             }
 

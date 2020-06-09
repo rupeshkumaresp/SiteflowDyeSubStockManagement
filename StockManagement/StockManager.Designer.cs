@@ -168,7 +168,7 @@
             this.MinimumSize = new System.Drawing.Size(480, 330);
             this.Name = "StockManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dye Sub Stock Management";
+            this.Text = "Site flow Dye Sub Stock Management";
             this.tabDownload.ResumeLayout(false);
             this.tabPageDownload.ResumeLayout(false);
             this.tabPageDownload.PerformLayout();
