@@ -32,6 +32,7 @@ namespace nsDyeSubStockManagement
 
         public void CreateSpreadSheet()
         {
+
             worksheet = package.Workbook.Worksheets.Add("Stocks");
             int rowJump = 1;
             AddMainHeaderRow();
@@ -767,7 +768,19 @@ namespace nsDyeSubStockManagement
 
             column++;
 
-            worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Value_of_Stock_in_House);
+            var valueOfStockInHouse = "";
+
+            if (string.IsNullOrEmpty(stock.Unit_Cost))
+                valueOfStockInHouse = null;
+            else
+            {
+                var unitCostPrice = stock.Unit_Cost.Replace("£", "");
+
+                var valueofStock = Math.Round(((Convert.ToDecimal(stock.ESP_Stock) + Convert.ToDecimal(stock.CATs_Stock)) * Convert.ToDecimal(unitCostPrice)), 1);
+                worksheet.Cells[rowJump, column].Value = Convert.ToString(valueofStock);
+
+            }
+
             worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
@@ -776,6 +789,7 @@ namespace nsDyeSubStockManagement
 
             column++;
 
+          
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_1);
             worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(

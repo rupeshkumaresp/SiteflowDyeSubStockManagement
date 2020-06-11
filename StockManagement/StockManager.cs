@@ -203,6 +203,7 @@ namespace nsDyeSubStockManagement
                     var unitCost = row["Unit Cost".ToLower()];
                     var valueOfStockInHouse = row["Value of Stock in House".ToLower()];
 
+
                     var Component1 = row["Component 1".ToLower()];
                     var Component1Qty = row["Component 1 Qty".ToLower()];
                     var Component2 = row["Component 2".ToLower()];
@@ -221,105 +222,122 @@ namespace nsDyeSubStockManagement
 
                     var stock = ctx.tDyeSubStocksV2.FirstOrDefault(s => s.Stock_Name == stockName && s.Stock_Type == stockType && s.Stock_Category == stockCategory && s.Substrate_Name == substrateName);
 
+                    bool newStock = false;
                     if (stock == null)
                     {
-                        if (!string.IsNullOrEmpty(stockName) && !string.IsNullOrEmpty(stockType) && !string.IsNullOrEmpty(substrateName))
-                        {
-                            stock = new tDyeSubStocksV2();
-                            stock.Stock_Name = stockName;
-                            stock.Stock_Type = stockType;
-                            stock.Stock_Category = stockCategory;
-                            stock.Substrate_Name = substrateName;
-                            stock.Sizes = sizes;
-                            stock.Colours = colours;
-                            stock.Weeks_Limit_Req_ = weeksLimitReq;
-                            stock.Weeks_Left = WeeksLeft;
-                            stock.ESP_Stock = espStock;
-                            stock.CATs_Stock = catsStock;
-                            stock.Live_Stock = liveStock;
-                            stock.Highest_Week = highestWeek;
-                            stock.WK1 = wk1;
-
-                            stock.WK1 = wk1;
-                            stock.WK2 = wk2;
-                            stock.WK3 = wk3;
-                            stock.WK4 = wk4;
-                            stock.WK5 = wk5;
-                            stock.WK6 = wk6;
-                            stock.WK7 = wk7;
-                            stock.WK8 = wk8;
-                            stock.WK9 = wk9;
-                            stock.WK10 = wk10;
-                            stock.WK11 = wk11;
-                            stock.WK12 = wk12;
-                            stock.WK13 = wk13;
-                            stock.WK14 = wk14;
-                            stock.WK15 = wk15;
-                            stock.WK16 = wk16;
-                            stock.WK17 = wk17;
-                            stock.WK18 = wk18;
-                            stock.WK19 = wk19;
-                            stock.WK20 = wk20;
-                            stock.WK21 = wk21;
-                            stock.WK22 = wk22;
-                            stock.WK23 = wk23;
-                            stock.WK24 = wk24;
-                            stock.WK25 = wk25;
-                            stock.WK26 = wk26;
-                            stock.WK27 = wk27;
-                            stock.WK28 = wk28;
-                            stock.WK29 = wk29;
-                            stock.WK30 = wk30;
-                            stock.WK31 = wk31;
-                            stock.WK32 = wk32;
-                            stock.WK33 = wk33;
-                            stock.WK34 = wk34;
-                            stock.WK35 = wk35;
-                            stock.WK36 = wk36;
-                            stock.WK37 = wk37;
-                            stock.WK38 = wk38;
-                            stock.WK39 = wk39;
-                            stock.WK40 = wk40;
-                            stock.WK41 = wk41;
-                            stock.WK42 = wk42;
-                            stock.WK43 = wk43;
-                            stock.WK44 = wk44;
-                            stock.WK45 = wk45;
-                            stock.WK46 = wk46;
-                            stock.WK47 = wk47;
-                            stock.WK48 = wk48;
-                            stock.WK49 = wk49;
-                            stock.WK50 = wk50;
-                            stock.WK51 = wk51;
-                            stock.WK52 = wk52;
-                            stock.YEAR = System.DateTime.Now.Year;
-                            stock.Yearly_Total = yearlyTotal;
-                            stock.Stock_Available_External = stockAvailableExternal;
-                            stock.External_Supplier = externalSupplier;
-                            stock.Unit_Cost = unitCost;
-                            stock.Value_of_Stock_in_House = valueOfStockInHouse;
-                            stock.Component_1 = Component1;
-                            stock.Component_1_Qty = Component1Qty;
-
-                            stock.Component_2 = Component2;
-                            stock.Component_2_Qty = Component2Qty;
-
-                            stock.Component_3 = Component3;
-                            stock.Component_3_Qty = Component3Qty;
-
-                            stock.Component_4 = Component4;
-                            stock.Component_4_Qty = Component4Qty;
-
-                            stock.Component_5 = Component5;
-                            stock.Component_5_Qty = Component5Qty;
-
-                            ctx.tDyeSubStocksV2.Add(stock);
-                            ctx.SaveChanges();
-                        }
+                        stock = new tDyeSubStocksV2();
+                        newStock = true;
                     }
 
-                    if (stock == null)
-                        continue;
+                    if (!string.IsNullOrEmpty(stockName) && !string.IsNullOrEmpty(stockType) && !string.IsNullOrEmpty(substrateName))
+                    {
+                        stock.Stock_Name = stockName;
+                        stock.Stock_Type = stockType;
+                        stock.Stock_Category = stockCategory;
+                        stock.Substrate_Name = substrateName;
+                        stock.Sizes = sizes;
+                        stock.Colours = colours;
+                        stock.Weeks_Limit_Req_ = weeksLimitReq;
+                        stock.Weeks_Left = WeeksLeft;
+                        stock.ESP_Stock = espStock;
+                        stock.CATs_Stock = catsStock;
+                        stock.Live_Stock = liveStock;
+                        stock.Highest_Week = highestWeek;
+                        stock.WK1 = wk1;
+
+                        stock.WK1 = wk1;
+                        stock.WK2 = wk2;
+                        stock.WK3 = wk3;
+                        stock.WK4 = wk4;
+                        stock.WK5 = wk5;
+                        stock.WK6 = wk6;
+                        stock.WK7 = wk7;
+                        stock.WK8 = wk8;
+                        stock.WK9 = wk9;
+                        stock.WK10 = wk10;
+                        stock.WK11 = wk11;
+                        stock.WK12 = wk12;
+                        stock.WK13 = wk13;
+                        stock.WK14 = wk14;
+                        stock.WK15 = wk15;
+                        stock.WK16 = wk16;
+                        stock.WK17 = wk17;
+                        stock.WK18 = wk18;
+                        stock.WK19 = wk19;
+                        stock.WK20 = wk20;
+                        stock.WK21 = wk21;
+                        stock.WK22 = wk22;
+                        stock.WK23 = wk23;
+                        stock.WK24 = wk24;
+                        stock.WK25 = wk25;
+                        stock.WK26 = wk26;
+                        stock.WK27 = wk27;
+                        stock.WK28 = wk28;
+                        stock.WK29 = wk29;
+                        stock.WK30 = wk30;
+                        stock.WK31 = wk31;
+                        stock.WK32 = wk32;
+                        stock.WK33 = wk33;
+                        stock.WK34 = wk34;
+                        stock.WK35 = wk35;
+                        stock.WK36 = wk36;
+                        stock.WK37 = wk37;
+                        stock.WK38 = wk38;
+                        stock.WK39 = wk39;
+                        stock.WK40 = wk40;
+                        stock.WK41 = wk41;
+                        stock.WK42 = wk42;
+                        stock.WK43 = wk43;
+                        stock.WK44 = wk44;
+                        stock.WK45 = wk45;
+                        stock.WK46 = wk46;
+                        stock.WK47 = wk47;
+                        stock.WK48 = wk48;
+                        stock.WK49 = wk49;
+                        stock.WK50 = wk50;
+                        stock.WK51 = wk51;
+                        stock.WK52 = wk52;
+                        stock.YEAR = System.DateTime.Now.Year;
+                        stock.Yearly_Total = yearlyTotal;
+                        stock.Stock_Available_External = stockAvailableExternal;
+                        stock.External_Supplier = externalSupplier;
+                        stock.Unit_Cost = unitCost;
+                        stock.Value_of_Stock_in_House = valueOfStockInHouse;
+
+                        if (string.IsNullOrEmpty(unitCost))
+                        {
+                            stock.Value_of_Stock_in_House = null;
+                        }
+                        else
+                        {
+                            var unitCostPrice = unitCost.Replace("£", "");
+                            var valueofStock = Math.Round(((Convert.ToDecimal(espStock) + Convert.ToDecimal(catsStock)) * Convert.ToDecimal(unitCostPrice)), 1);
+
+                            stock.Value_of_Stock_in_House = Convert.ToString(valueofStock);
+                        }
+                        stock.Component_1 = Component1;
+                        stock.Component_1_Qty = Component1Qty;
+
+                        stock.Component_2 = Component2;
+                        stock.Component_2_Qty = Component2Qty;
+
+                        stock.Component_3 = Component3;
+                        stock.Component_3_Qty = Component3Qty;
+
+                        stock.Component_4 = Component4;
+                        stock.Component_4_Qty = Component4Qty;
+
+                        stock.Component_5 = Component5;
+                        stock.Component_5_Qty = Component5Qty;
+
+
+                    }
+
+                    if (newStock)
+                        ctx.tDyeSubStocksV2.Add(stock);
+
+                    ctx.SaveChanges();
+
 
                     bool updated = false;
 
