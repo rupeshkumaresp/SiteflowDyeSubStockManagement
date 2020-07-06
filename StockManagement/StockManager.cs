@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -26,14 +27,29 @@ namespace nsDyeSubStockManagement
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
-
-            var date = System.DateTime.Now;
-
+            
             Thread processThread = new Thread(new ThreadStart(GenerateReport));
 
             processThread.Start();
 
         }
+
+        public static int GetIso8601WeekOfYear(DateTime time)
+        {
+            //  If its Monday, Tuesday or Wednesday, then it'll 
+            // be the same week# as whatever Thursday, Friday or Saturday are,
+            // and we always get those right
+            DayOfWeek day = CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(time);
+            if (day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday)
+            {
+                time = time.AddDays(3);
+            }
+
+            // Return the week of our adjusted day
+            return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+        }
+
+
 
         private void GenerateReport()
         {

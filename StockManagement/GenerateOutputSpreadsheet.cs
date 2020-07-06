@@ -68,7 +68,7 @@ namespace nsDyeSubStockManagement
                 worksheet.Column(15 + i).Width = 15;
             }
 
-            
+
             worksheet.Column(69).Width = 15;
             worksheet.Column(70).Width = 15;
             worksheet.Column(71).Width = 30;
@@ -776,7 +776,16 @@ namespace nsDyeSubStockManagement
             {
                 var unitCostPrice = stock.Unit_Cost.Replace("£", "");
 
-                var valueofStock = Math.Round(((Convert.ToDecimal(stock.ESP_Stock) + Convert.ToDecimal(stock.CATs_Stock)) * Convert.ToDecimal(unitCostPrice)), 1);
+                decimal espStock = 0;
+                decimal catsStock = 0;
+                decimal unitCostPriceVal = 0;
+
+
+                decimal.TryParse(stock.ESP_Stock, out espStock);
+                decimal.TryParse(stock.CATs_Stock, out catsStock);
+                decimal.TryParse(unitCostPrice, out unitCostPriceVal);
+
+                var valueofStock = Math.Round(((espStock + catsStock) * unitCostPriceVal), 1);
                 worksheet.Cells[rowJump, column].Value = Convert.ToString(valueofStock);
 
             }
@@ -789,7 +798,7 @@ namespace nsDyeSubStockManagement
 
             column++;
 
-          
+
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_1);
             worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
