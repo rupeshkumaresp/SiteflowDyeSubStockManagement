@@ -12,15 +12,15 @@ namespace nsDyeSubStockManagement.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tDyeSubConsumption
+    public partial class tDyeSubConsumptionV2
     {
         public long ID { get; set; }
-        public int DyeSubID { get; set; }
+        public long DyeSubID { get; set; }
         public Nullable<int> Consumed { get; set; }
         public Nullable<System.DateTime> ConsumedDateTime { get; set; }
         public Nullable<bool> UsedInStockCalculation { get; set; }
         public Nullable<System.DateTime> UsedInStockCalculationDate { get; set; }
     
-        public virtual tDyeSubStock tDyeSubStock { get; set; }
+        public virtual tDyeSubStocksV2 tDyeSubStocksV2 { get; set; }
     }
 }

@@ -14,17 +14,23 @@ namespace nsDyeSubStockManagement.Model
     
     public partial class tDyeSubStocksV2
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tDyeSubStocksV2()
+        {
+            this.tDyeSubConsumptionV2 = new HashSet<tDyeSubConsumptionV2>();
+        }
+    
         public long ID { get; set; }
         public string Stock_Name { get; set; }
         public string Stock_Type { get; set; }
         public string Stock_Category { get; set; }
         public string Substrate_Name { get; set; }
+        public string Extra { get; set; }
         public string Sizes { get; set; }
         public string Colours { get; set; }
         public string Weeks_Limit_Req_ { get; set; }
         public string Weeks_Left { get; set; }
         public string ESP_Stock { get; set; }
-        public string CATs_Stock { get; set; }
         public string Live_Stock { get; set; }
         public string Spoilage { get; set; }
         public string DOA { get; set; }
@@ -100,5 +106,8 @@ namespace nsDyeSubStockManagement.Model
         public string Component_5 { get; set; }
         public string Component_5_Qty { get; set; }
         public Nullable<bool> LiveStockCellRed { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tDyeSubConsumptionV2> tDyeSubConsumptionV2 { get; set; }
     }
 }

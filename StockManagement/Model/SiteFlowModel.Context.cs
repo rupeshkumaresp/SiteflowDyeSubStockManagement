@@ -25,10 +25,7 @@ namespace nsDyeSubStockManagement.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tDyeSubConsumption> tDyeSubConsumption { get; set; }
-        public virtual DbSet<tDyeSubStock> tDyeSubStock { get; set; }
-        public virtual DbSet<tSiteFlowInputData> tSiteFlowInputData { get; set; }
-        public virtual DbSet<tSiteFlowInputData_AUDIT> tSiteFlowInputData_AUDIT { get; set; }
+        public virtual DbSet<tDyeSubConsumptionV2> tDyeSubConsumptionV2 { get; set; }
         public virtual DbSet<tDyeSubStocksV2> tDyeSubStocksV2 { get; set; }
     }
 }

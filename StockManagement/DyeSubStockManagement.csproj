@@ -79,19 +79,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SiteFlowModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\tDyeSubConsumption.cs">
-      <DependentUpon>SiteFlowModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\tDyeSubStock.cs">
+    <Compile Include="Model\tDyeSubConsumptionV2.cs">
       <DependentUpon>SiteFlowModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tDyeSubStocksV2.cs">
-      <DependentUpon>SiteFlowModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\tSiteFlowInputData.cs">
-      <DependentUpon>SiteFlowModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\tSiteFlowInputData_AUDIT.cs">
       <DependentUpon>SiteFlowModel.tt</DependentUpon>
     </Compile>
     <Compile Include="NetworkConnection.cs" />
