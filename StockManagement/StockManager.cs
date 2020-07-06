@@ -548,7 +548,7 @@ namespace nsDyeSubStockManagement
 
             }
 
-            if (last4WeekData.Count > 0 && last4WeekData.Sum() > 0)
+            if (last4WeekData.Count > 0 && last4WeekData.Sum() > 0 && !string.IsNullOrEmpty(dyeSubStock.Weeks_Limit_Req_) && !string.IsNullOrEmpty(dyeSubStock.Live_Stock))
             {
                 sum_4_Weeks_by_4 = last4WeekData.Sum() / last4WeekData.Count;
 
