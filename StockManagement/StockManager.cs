@@ -27,7 +27,7 @@ namespace nsDyeSubStockManagement
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
-            
+
             Thread processThread = new Thread(new ThreadStart(GenerateReport));
 
             processThread.Start();
@@ -48,7 +48,6 @@ namespace nsDyeSubStockManagement
             // Return the week of our adjusted day
             return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
         }
-
 
 
         private void GenerateReport()
@@ -352,6 +351,9 @@ namespace nsDyeSubStockManagement
                     if (newStock)
                         ctx.tDyeSubStocksV2.Add(stock);
 
+                    var weekno = GetIso8601WeekOfYear(System.DateTime.Now);
+
+                    GetWeekMax(stock, weekno);
                     ctx.SaveChanges();
 
 
@@ -442,6 +444,121 @@ namespace nsDyeSubStockManagement
                 {
                     this.btnBrowse.BeginInvoke((MethodInvoker)delegate () { this.btnBrowse.Enabled = true; ; ; });
                 }
+
+            }
+        }
+
+        private static void GetWeekMax(tDyeSubStocksV2 dyeSubStock, int currentWeek)
+        {
+            List<int> weekList = new List<int>();
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK1));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK2));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK3));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK4));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK5));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK6));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK7));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK8));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK9));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK10));
+
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK11));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK12));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK13));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK14));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK15));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK16));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK17));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK18));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK19));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK20));
+
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK21));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK22));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK23));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK24));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK25));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK26));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK27));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK28));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK29));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK30));
+
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK31));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK32));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK33));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK34));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK35));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK36));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK37));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK38));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK39));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK40));
+
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK41));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK42));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK43));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK44));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK45));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK46));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK47));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK48));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK49));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK50));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK51));
+            weekList.Add(Convert.ToInt32(dyeSubStock.WK52));
+
+            var max = weekList.Max();
+
+            dyeSubStock.Yearly_Total = Convert.ToString(weekList.Sum());
+            dyeSubStock.Highest_Week = Convert.ToString(max);
+
+            decimal sum_4_Weeks_by_4 = 1;
+
+            List<int> last4WeekData = new List<int>();
+
+            for (int i = weekList.Count - 1; i > 1; i--)
+            {
+                if (i + 1 <= currentWeek)
+                {
+                    last4WeekData.Add(weekList[i]);
+                    if (last4WeekData.Count == 4)
+                        break;
+                }
+
+            }
+
+            sum_4_Weeks_by_4 = last4WeekData.Sum() / last4WeekData.Count;
+
+            dyeSubStock.Weeks_Left = Convert.ToString(Convert.ToInt32(dyeSubStock.Live_Stock) / sum_4_Weeks_by_4);
+
+            if ((Convert.ToInt32(dyeSubStock.Weeks_Limit_Req_) * sum_4_Weeks_by_4) - Convert.ToInt32(dyeSubStock.Live_Stock) > 0)
+            {
+                dyeSubStock.LiveStockCellRed = true;
+            }
+            else
+            {
+                dyeSubStock.LiveStockCellRed = false;
+            }
+
+
+            var valueofStock = 0m;
+
+            if (!string.IsNullOrEmpty(dyeSubStock.Unit_Cost))
+            {
+                var unitCostPrice = dyeSubStock.Unit_Cost.Replace("£", "");
+
+                decimal espStock = 0;
+                decimal catsStock = 0;
+                decimal unitCostPriceVal = 0;
+
+
+                decimal.TryParse(dyeSubStock.ESP_Stock, out espStock);
+                decimal.TryParse(dyeSubStock.CATs_Stock, out catsStock);
+                decimal.TryParse(unitCostPrice, out unitCostPriceVal);
+
+                valueofStock = Math.Round(((espStock + catsStock) * unitCostPriceVal), 1);
+                dyeSubStock.Value_of_Stock_in_House = Convert.ToString(valueofStock);
 
             }
         }
