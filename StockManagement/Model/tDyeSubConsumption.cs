@@ -18,6 +18,8 @@ namespace nsDyeSubStockManagement.Model
         public int DyeSubID { get; set; }
         public Nullable<int> Consumed { get; set; }
         public Nullable<System.DateTime> ConsumedDateTime { get; set; }
+        public Nullable<bool> UsedInStockCalculation { get; set; }
+        public Nullable<System.DateTime> UsedInStockCalculationDate { get; set; }
     
         public virtual tDyeSubStock tDyeSubStock { get; set; }
     }

@@ -32,7 +32,6 @@ namespace nsDyeSubStockManagement
 
         public void CreateSpreadSheet()
         {
-
             worksheet = package.Workbook.Worksheets.Add("Stocks");
             int rowJump = 1;
             AddMainHeaderRow();
@@ -236,6 +235,11 @@ namespace nsDyeSubStockManagement
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+
+            if (Convert.ToBoolean(stock.LiveStockCellRed))
+            {
+                worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.Red);
+            }
 
             column++;
 
@@ -768,28 +772,7 @@ namespace nsDyeSubStockManagement
 
             column++;
 
-            var valueOfStockInHouse = "";
-
-            if (string.IsNullOrEmpty(stock.Unit_Cost))
-                valueOfStockInHouse = null;
-            else
-            {
-                var unitCostPrice = stock.Unit_Cost.Replace("£", "");
-
-                decimal espStock = 0;
-                decimal catsStock = 0;
-                decimal unitCostPriceVal = 0;
-
-
-                decimal.TryParse(stock.ESP_Stock, out espStock);
-                decimal.TryParse(stock.CATs_Stock, out catsStock);
-                decimal.TryParse(unitCostPrice, out unitCostPriceVal);
-
-                var valueofStock = Math.Round(((espStock + catsStock) * unitCostPriceVal), 1);
-                worksheet.Cells[rowJump, column].Value = Convert.ToString(valueofStock);
-
-            }
-
+            worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Value_of_Stock_in_House);
             worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);

@@ -99,5 +99,6 @@ namespace nsDyeSubStockManagement.Model
         public string Component_4_Qty { get; set; }
         public string Component_5 { get; set; }
         public string Component_5_Qty { get; set; }
+        public Nullable<bool> LiveStockCellRed { get; set; }
     }
 }

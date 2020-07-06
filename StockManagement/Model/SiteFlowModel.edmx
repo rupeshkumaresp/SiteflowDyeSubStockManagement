@@ -13,6 +13,8 @@
           <Property Name="DyeSubID" Type="int" Nullable="false" />
           <Property Name="Consumed" Type="int" />
           <Property Name="ConsumedDateTime" Type="datetime" />
+          <Property Name="UsedInStockCalculation" Type="bit" />
+          <Property Name="UsedInStockCalculationDate" Type="datetime" />
         </EntityType>
         <EntityType Name="tDyeSubStock">
           <Key>
@@ -134,6 +136,7 @@
           <Property Name="Component 4 Qty" Type="nvarchar(max)" />
           <Property Name="Component 5" Type="nvarchar(max)" />
           <Property Name="Component 5 Qty" Type="nvarchar(max)" />
+          <Property Name="LiveStockCellRed" Type="bit" />
         </EntityType>
         <EntityType Name="tSiteFlowInputData">
           <Key>
@@ -329,6 +332,8 @@ warning 6002: The table/view 'SiteFlow.dbo.tSiteFlowInputData_AUDIT' does not ha
           <Property Name="Consumed" Type="Int32" />
           <Property Name="ConsumedDateTime" Type="DateTime" Precision="3" />
           <NavigationProperty Name="tDyeSubStock" Relationship="SiteFlowModel.FK_tDyeSubConsumption_tDyeSubStock" FromRole="tDyeSubConsumption" ToRole="tDyeSubStock" />
+          <Property Name="UsedInStockCalculation" Type="Boolean" />
+          <Property Name="UsedInStockCalculationDate" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="tDyeSubStock">
           <Key>
@@ -561,6 +566,7 @@ warning 6002: The table/view 'SiteFlow.dbo.tSiteFlowInputData_AUDIT' does not ha
           <Property Name="Component_4_Qty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Component_5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Component_5_Qty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LiveStockCellRed" Type="Boolean" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -571,6 +577,8 @@ warning 6002: The table/view 'SiteFlow.dbo.tSiteFlowInputData_AUDIT' does not ha
           <EntitySetMapping Name="tDyeSubConsumption">
             <EntityTypeMapping TypeName="SiteFlowModel.tDyeSubConsumption">
               <MappingFragment StoreEntitySet="tDyeSubConsumption">
+                <ScalarProperty Name="UsedInStockCalculationDate" ColumnName="UsedInStockCalculationDate" />
+                <ScalarProperty Name="UsedInStockCalculation" ColumnName="UsedInStockCalculation" />
                 <ScalarProperty Name="ConsumedDateTime" ColumnName="ConsumedDateTime" />
                 <ScalarProperty Name="Consumed" ColumnName="Consumed" />
                 <ScalarProperty Name="DyeSubID" ColumnName="DyeSubID" />
@@ -713,6 +721,7 @@ warning 6002: The table/view 'SiteFlow.dbo.tSiteFlowInputData_AUDIT' does not ha
           <EntitySetMapping Name="tDyeSubStocksV2">
             <EntityTypeMapping TypeName="SiteFlowModel.tDyeSubStocksV2">
               <MappingFragment StoreEntitySet="tDyeSubStocksV2">
+                <ScalarProperty Name="LiveStockCellRed" ColumnName="LiveStockCellRed" />
                 <ScalarProperty Name="Component_5_Qty" ColumnName="Component 5 Qty" />
                 <ScalarProperty Name="Component_5" ColumnName="Component 5" />
                 <ScalarProperty Name="Component_4_Qty" ColumnName="Component 4 Qty" />
