@@ -155,6 +155,7 @@ namespace nsDyeSubStockManagement
                     var spoliage = row["Spoilage".ToLower()];
 
                     var doa = row["DOA".ToLower()];
+                    var AddToESPStock = row["Add to ESP Stock".ToLower()];
                     var AddToSpoilage = row["Add to Spoilage".ToLower()];
                     var AddToDOA = row["Add to DOA".ToLower()];
 
@@ -353,11 +354,27 @@ namespace nsDyeSubStockManagement
 
                     var weekno = GetIso8601WeekOfYear(System.DateTime.Now);
 
-                    GetWeekMax(stock, weekno);
-                    ctx.SaveChanges();
 
 
                     bool updated = false;
+
+                    if (!string.IsNullOrEmpty(AddToESPStock))
+                    {
+                        int addToEspStockQty = 0;
+
+                        bool conversion = int.TryParse(AddToESPStock, out addToEspStockQty);
+
+                        if (conversion)
+                        {
+                            if (stock.ESP_Stock == null)
+                                stock.ESP_Stock = Convert.ToString(AddToESPStock);
+                            else
+                                stock.ESP_Stock = Convert.ToString(Convert.ToInt32(stock.ESP_Stock) + AddToESPStock);
+
+                            updated = true;
+                        }
+
+                    }
 
                     if (!string.IsNullOrEmpty(AddToSpoilage))
                     {
@@ -374,7 +391,7 @@ namespace nsDyeSubStockManagement
                             else
                             {
                                 stock.Spoilage = Convert.ToString(Convert.ToInt32(stock.Spoilage) + spoilageQty);
-                                //stock.QuantityAvailable = (stock.QuantityAvailable != null ? stock.QuantityAvailable - spoilageQty : -spoilageQty);
+                                stock.ESP_Stock = (stock.ESP_Stock != null ? Convert.ToString(Convert.ToInt32(stock.ESP_Stock) - spoilageQty) : Convert.ToString(-spoilageQty));
                             }
                             updated = true;
                         }
@@ -398,12 +415,16 @@ namespace nsDyeSubStockManagement
                             else
                             {
                                 stock.DOA = Convert.ToString(Convert.ToInt32(stock.DOA) + doaQTy);
-                                //stock.QuantityAvailable = (stock.QuantityAvailable != null ? stock.QuantityAvailable - doaQTy : -doaQTy);
+                                stock.ESP_Stock = (stock.ESP_Stock != null ? Convert.ToString(Convert.ToInt32(stock.ESP_Stock) - doaQTy) : Convert.ToString(-doaQTy));
                             }
                             updated = true;
                         }
 
                     }
+
+                    GetWeekMax(stock, weekno);
+                    ctx.SaveChanges();
+
 
                     if (updated)
                         ctx.SaveChanges();
@@ -549,15 +570,13 @@ namespace nsDyeSubStockManagement
                 var unitCostPrice = dyeSubStock.Unit_Cost.Replace("£", "");
 
                 decimal espStock = 0;
-                decimal catsStock = 0;
                 decimal unitCostPriceVal = 0;
 
 
                 decimal.TryParse(dyeSubStock.ESP_Stock, out espStock);
-                decimal.TryParse(dyeSubStock.CATs_Stock, out catsStock);
                 decimal.TryParse(unitCostPrice, out unitCostPriceVal);
 
-                valueofStock = Math.Round(((espStock + catsStock) * unitCostPriceVal), 1);
+                valueofStock = Math.Round((espStock * unitCostPriceVal), 1);
                 dyeSubStock.Value_of_Stock_in_House = Convert.ToString(valueofStock);
 
             }

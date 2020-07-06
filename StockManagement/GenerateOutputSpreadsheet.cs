@@ -220,14 +220,14 @@ namespace nsDyeSubStockManagement
 
             column++;
 
-            worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.CATs_Stock);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-            worksheet.Cells[rowJump, column].Style.Border.BorderAround(
-                OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
-            worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
+            //worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.CATs_Stock);
+            //worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            //worksheet.Cells[rowJump, column].Style.Border.BorderAround(
+            //    OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
+            //worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+            //worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
 
-            column++;
+            //column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Live_Stock);
             worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
@@ -261,7 +261,7 @@ namespace nsDyeSubStockManagement
 
             column++;
 
-            worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Add_to_Spoilage);
+            worksheet.Cells[rowJump, column].Value = "";
             worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
@@ -270,7 +270,16 @@ namespace nsDyeSubStockManagement
 
             column++;
 
-            worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Add_to_DOA);
+            worksheet.Cells[rowJump, column].Value = "";
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.Border.BorderAround(
+                OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
+            worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
+
+            column++;
+
+            worksheet.Cells[rowJump, column].Value = "";
             worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
@@ -911,8 +920,8 @@ namespace nsDyeSubStockManagement
             headerColumns.Add("ESP Stock", icount);
             icount++;
 
-            headerColumns.Add("CATs Stock", icount);
-            icount++;
+            //headerColumns.Add("CATs Stock", icount);
+            //icount++;
 
             headerColumns.Add("Live Stock", icount);
             icount++;
@@ -921,6 +930,9 @@ namespace nsDyeSubStockManagement
             icount++;
 
             headerColumns.Add("DOA", icount);
+            icount++;
+
+            headerColumns.Add("Add to ESP Stock", icount);
             icount++;
 
             headerColumns.Add("Add to Spoilage", icount);
