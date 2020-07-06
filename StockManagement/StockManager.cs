@@ -552,7 +552,7 @@ namespace nsDyeSubStockManagement
             {
                 sum_4_Weeks_by_4 = last4WeekData.Sum() / last4WeekData.Count;
 
-                dyeSubStock.Weeks_Left = Convert.ToString(Convert.ToInt32(dyeSubStock.Live_Stock) / sum_4_Weeks_by_4);
+                dyeSubStock.Weeks_Left = Convert.ToString(Convert.ToInt32(Convert.ToInt32(dyeSubStock.Live_Stock) / sum_4_Weeks_by_4));
 
                 if ((Convert.ToInt32(dyeSubStock.Weeks_Limit_Req_) * sum_4_Weeks_by_4) -
                     Convert.ToInt32(dyeSubStock.Live_Stock) > 0)
