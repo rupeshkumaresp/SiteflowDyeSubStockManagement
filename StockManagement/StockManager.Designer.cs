@@ -39,6 +39,7 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnUpload = new System.Windows.Forms.Button();
             this.txtBoxOutput = new System.Windows.Forms.TextBox();
+            this.labelUploadMessage = new System.Windows.Forms.Label();
             this.tabDownload.SuspendLayout();
             this.tabPageDownload.SuspendLayout();
             this.tabPageUpload.SuspendLayout();
@@ -49,7 +50,7 @@
             // 
             this.btnDownload.Location = new System.Drawing.Point(95, 67);
             this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(193, 23);
+            this.btnDownload.Size = new System.Drawing.Size(198, 37);
             this.btnDownload.TabIndex = 0;
             this.btnDownload.Text = "Download Stock(.xlsx)";
             this.btnDownload.UseVisualStyleBackColor = true;
@@ -59,6 +60,7 @@
             // 
             this.tabDownload.Controls.Add(this.tabPageDownload);
             this.tabDownload.Controls.Add(this.tabPageUpload);
+            this.tabDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDownload.Location = new System.Drawing.Point(27, 24);
             this.tabDownload.Name = "tabDownload";
             this.tabDownload.SelectedIndex = 0;
@@ -70,10 +72,10 @@
             // 
             this.tabPageDownload.Controls.Add(this.lblStatusDownload);
             this.tabPageDownload.Controls.Add(this.btnDownload);
-            this.tabPageDownload.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDownload.Location = new System.Drawing.Point(4, 24);
             this.tabPageDownload.Name = "tabPageDownload";
             this.tabPageDownload.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDownload.Size = new System.Drawing.Size(396, 187);
+            this.tabPageDownload.Size = new System.Drawing.Size(396, 185);
             this.tabPageDownload.TabIndex = 0;
             this.tabPageDownload.Text = "View Stocks";
             this.tabPageDownload.UseVisualStyleBackColor = true;
@@ -83,22 +85,23 @@
             this.lblStatusDownload.AutoSize = true;
             this.lblStatusDownload.Location = new System.Drawing.Point(112, 139);
             this.lblStatusDownload.Name = "lblStatusDownload";
-            this.lblStatusDownload.Size = new System.Drawing.Size(0, 13);
+            this.lblStatusDownload.Size = new System.Drawing.Size(0, 15);
             this.lblStatusDownload.TabIndex = 1;
             // 
             // tabPageUpload
             // 
             this.tabPageUpload.Controls.Add(this.groupBoxUpdateStock);
-            this.tabPageUpload.Location = new System.Drawing.Point(4, 22);
+            this.tabPageUpload.Location = new System.Drawing.Point(4, 24);
             this.tabPageUpload.Name = "tabPageUpload";
             this.tabPageUpload.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUpload.Size = new System.Drawing.Size(396, 187);
+            this.tabPageUpload.Size = new System.Drawing.Size(396, 185);
             this.tabPageUpload.TabIndex = 1;
             this.tabPageUpload.Text = "Update Stocks";
             this.tabPageUpload.UseVisualStyleBackColor = true;
             // 
             // groupBoxUpdateStock
             // 
+            this.groupBoxUpdateStock.Controls.Add(this.labelUploadMessage);
             this.groupBoxUpdateStock.Controls.Add(this.btnClear);
             this.groupBoxUpdateStock.Controls.Add(this.btnBrowse);
             this.groupBoxUpdateStock.Controls.Add(this.lblStatus);
@@ -113,9 +116,9 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(90, 84);
+            this.btnClear.Location = new System.Drawing.Point(80, 80);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(70, 23);
+            this.btnClear.Size = new System.Drawing.Size(80, 28);
             this.btnClear.TabIndex = 17;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -134,16 +137,16 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(77, 142);
+            this.lblStatus.Location = new System.Drawing.Point(66, 157);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblStatus.Size = new System.Drawing.Size(0, 15);
             this.lblStatus.TabIndex = 16;
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(178, 84);
+            this.btnUpload.Location = new System.Drawing.Point(178, 79);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(113, 23);
+            this.btnUpload.Size = new System.Drawing.Size(123, 29);
             this.btnUpload.TabIndex = 13;
             this.btnUpload.Text = "Upload Stock";
             this.btnUpload.UseVisualStyleBackColor = true;
@@ -154,8 +157,19 @@
             this.txtBoxOutput.Enabled = false;
             this.txtBoxOutput.Location = new System.Drawing.Point(6, 42);
             this.txtBoxOutput.Name = "txtBoxOutput";
-            this.txtBoxOutput.Size = new System.Drawing.Size(295, 20);
+            this.txtBoxOutput.Size = new System.Drawing.Size(295, 21);
             this.txtBoxOutput.TabIndex = 14;
+            // 
+            // labelUploadMessage
+            // 
+            this.labelUploadMessage.AutoSize = true;
+            this.labelUploadMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUploadMessage.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelUploadMessage.Location = new System.Drawing.Point(6, 115);
+            this.labelUploadMessage.Name = "labelUploadMessage";
+            this.labelUploadMessage.Size = new System.Drawing.Size(379, 15);
+            this.labelUploadMessage.TabIndex = 18;
+            this.labelUploadMessage.Text = "(Upload will update all the stocks data including week consumtption)";
             // 
             // StockManager
             // 
@@ -192,6 +206,7 @@
         private System.Windows.Forms.GroupBox groupBoxUpdateStock;
         private System.Windows.Forms.Label lblStatusDownload;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label labelUploadMessage;
     }
 }
 
