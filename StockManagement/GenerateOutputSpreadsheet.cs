@@ -76,7 +76,7 @@ namespace nsDyeSubStockManagement
             worksheet.Column(72).Width = 10;
             worksheet.Column(73).Width = 20;
 
-            worksheet.Column(74).Width = 10;
+            worksheet.Column(74).Width = 6;
             worksheet.Column(75).Width = 9;
 
             worksheet.Column(76).Width = 15;
@@ -94,9 +94,14 @@ namespace nsDyeSubStockManagement
             worksheet.Column(84).Width = 15;
             worksheet.Column(85).Width = 9;
 
-            //worksheet.Column(12).Style.Locked = false;
-            //worksheet.Column(13).Style.Locked = false;
-            //worksheet.Column(14).Style.Locked = false;
+            worksheet.Column(8).Style.Locked = false;
+            worksheet.Column(14).Style.Locked = false;
+            worksheet.Column(15).Style.Locked = false;
+            worksheet.Column(16).Style.Locked = false;
+            
+            worksheet.Column(72).Style.Locked = false;
+            worksheet.Column(73).Style.Locked = false;
+            worksheet.Column(74).Style.Locked = false;
 
             worksheet.Protection.IsProtected = true;
 
@@ -234,7 +239,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
             worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
@@ -1025,9 +1030,16 @@ namespace nsDyeSubStockManagement
                     worksheet.Cells[rowJump, colKvp.Value].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                     worksheet.Cells[rowJump, colKvp.Value].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGray);
                     worksheet.Cells[rowJump, colKvp.Value].Style.Font.Bold = true;
-                    worksheet.Cells[rowJump, colKvp.Value].Style.Font.Size = 12;
                     worksheet.Cells[rowJump, colKvp.Value].Style.WrapText = true;
                     worksheet.Cells[rowJump, colKvp.Value].Style.Font.Size = 9;
+
+                    if (colKvp.Key == "Stock Available External" || colKvp.Key == "External Supplier" || colKvp.Key == "Unit Cost" ||
+                        colKvp.Key == "Value of Stock in House")
+                    {
+                        worksheet.Cells[rowJump, colKvp.Value].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#e1d7f7"));
+                    }
+                      
+
                 }
             }
         }
