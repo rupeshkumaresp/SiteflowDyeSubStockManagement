@@ -140,16 +140,16 @@ namespace nsDyeSubStockManagement
             int column = 1;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Stock_Name);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                            OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Stock_Type);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
@@ -157,85 +157,86 @@ namespace nsDyeSubStockManagement
 
             if(stock.Stock_Type=="Component")
                 worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#c4aded"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Stock_Category);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
+            
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Substrate_Name);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Extra);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Sizes);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Colours);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Weeks_Limit_Req_);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Weeks_Left);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.ESP_Stock);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Live_Stock);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
@@ -245,646 +246,646 @@ namespace nsDyeSubStockManagement
             {
                 worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.Red);
             }
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Spoilage);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.DOA);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = "";
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = "";
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = "";
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Highest_Week);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK1);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK2);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK3);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK4);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK5);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK6);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK7);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK8);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK9);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK10);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK11);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK12);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK13);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK14);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK15);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK16);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK17);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK18);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK19);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK20);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK21);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK22);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK23);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK24);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK25);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK26);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK27);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK28);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK29);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK30);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK31);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK32);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK33);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK34);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK35);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK36);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK37);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK38);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK39);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK40);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK41);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK42);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK43);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK44);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK45);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK46);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK47);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK48);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK49);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK50);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK51);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK52);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.YEAR);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Yearly_Total);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Stock_Available_External);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.External_Supplier);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Unit_Cost);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Value_of_Stock_in_House);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#e1d7f7"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_1);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_1_Qty);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_2);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_2_Qty);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_3);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_3_Qty);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_4);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_4_Qty);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_5);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.Component_5_Qty);
-            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            worksheet.Cells[rowJump, column].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
             worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
-
+            worksheet.Cells[rowJump, column].Style.Font.Size = 9;
             column++;
 
 
@@ -1022,6 +1023,7 @@ namespace nsDyeSubStockManagement
                     worksheet.Cells[rowJump, colKvp.Value].Style.Font.Bold = true;
                     worksheet.Cells[rowJump, colKvp.Value].Style.Font.Size = 12;
                     worksheet.Cells[rowJump, colKvp.Value].Style.WrapText = true;
+                    worksheet.Cells[rowJump, colKvp.Value].Style.Font.Size = 9;
                 }
             }
         }
