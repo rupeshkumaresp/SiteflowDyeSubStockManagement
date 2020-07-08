@@ -83,7 +83,7 @@
             // lblStatusDownload
             // 
             this.lblStatusDownload.AutoSize = true;
-            this.lblStatusDownload.Location = new System.Drawing.Point(112, 139);
+            this.lblStatusDownload.Location = new System.Drawing.Point(92, 137);
             this.lblStatusDownload.Name = "lblStatusDownload";
             this.lblStatusDownload.Size = new System.Drawing.Size(0, 15);
             this.lblStatusDownload.TabIndex = 1;
@@ -137,7 +137,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(66, 157);
+            this.lblStatus.Location = new System.Drawing.Point(66, 146);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(0, 15);
             this.lblStatus.TabIndex = 16;
