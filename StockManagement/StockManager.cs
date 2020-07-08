@@ -50,7 +50,6 @@ namespace nsDyeSubStockManagement
             return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
         }
 
-
         private void GenerateReport()
         {
 
@@ -117,7 +116,6 @@ namespace nsDyeSubStockManagement
 
         private void UploadData()
         {
-
             try
             {
                 if (this.lblStatus.InvokeRequired)
@@ -140,47 +138,7 @@ namespace nsDyeSubStockManagement
 
                     if (!string.IsNullOrEmpty(sizes))
                     {
-                        var sizeArray = sizes.Split(new char[] { ',' });
-
-                        var finalSize = "";
-                        foreach (var sizeData in sizeArray)
-                        {
-                            var singleSizearray = sizeData.Split(new char[] { 'x' });
-
-                            foreach (var singlesizePart in singleSizearray)
-                            {
-                                if (singlesizePart.Contains("\""))
-                                {
-                                    var temp = singlesizePart.Replace("\"", "");
-
-                                    double tempInt = 0d;
-
-                                    double.TryParse(temp, out tempInt);
-
-                                    tempInt = Convert.ToDouble(tempInt * 25.4);
-                                    finalSize += tempInt + "x";
-                                }
-                                else
-                                {
-                                    finalSize += singlesizePart + "x";
-                                }
-
-                            }
-
-                            if (finalSize.EndsWith("x"))
-                            {
-                                finalSize = finalSize.Remove(finalSize.LastIndexOf("x"), 1);
-                            }
-
-                            finalSize += ",";
-                        }
-
-                        finalSize = finalSize.Replace(" ", "");
-                        finalSize = finalSize.Replace("mm", "");
-
-                        if (finalSize.EndsWith(","))
-                            finalSize = finalSize.Remove(finalSize.LastIndexOf(","), 1);
-
+                        var finalSize = GetFinalSizeInMM(sizes);
                         sizes = finalSize;
                     }
                     var colours = row["Colours".ToLower()];
@@ -512,6 +470,51 @@ namespace nsDyeSubStockManagement
                 }
 
             }
+        }
+
+        private static string GetFinalSizeInMM(string sizes)
+        {
+            var sizeArray = sizes.Split(new char[] { ',' });
+
+            var finalSize = "";
+            foreach (var sizeData in sizeArray)
+            {
+                var singleSizearray = sizeData.Split(new char[] { 'x' });
+
+                foreach (var singlesizePart in singleSizearray)
+                {
+                    if (singlesizePart.Contains("\""))
+                    {
+                        var temp = singlesizePart.Replace("\"", "");
+
+                        double tempInt = 0d;
+
+                        double.TryParse(temp, out tempInt);
+
+                        tempInt = Convert.ToDouble(tempInt * 25.4);
+                        finalSize += tempInt + "x";
+                    }
+                    else
+                    {
+                        finalSize += singlesizePart + "x";
+                    }
+                }
+
+                if (finalSize.EndsWith("x"))
+                {
+                    finalSize = finalSize.Remove(finalSize.LastIndexOf("x"), 1);
+                }
+
+                finalSize += ",";
+            }
+
+            finalSize = finalSize.Replace(" ", "");
+            finalSize = finalSize.Replace("mm", "");
+
+            if (finalSize.EndsWith(","))
+                finalSize = finalSize.Remove(finalSize.LastIndexOf(","), 1);
+
+            return finalSize;
         }
 
         private static void GetWeekMax(tDyeSubStocksV2 dyeSubStock, int currentWeek)
