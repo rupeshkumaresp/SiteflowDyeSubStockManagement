@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization.Configuration;
 
 namespace nsDyeSubStockManagement
 {
@@ -136,6 +137,52 @@ namespace nsDyeSubStockManagement
                     var extra = row["Extra".ToLower()];
 
                     var sizes = row["Sizes".ToLower()];
+
+                    if (!string.IsNullOrEmpty(sizes))
+                    {
+                        var sizeArray = sizes.Split(new char[] { ',' });
+
+                        var finalSize = "";
+                        foreach (var sizeData in sizeArray)
+                        {
+                            var singleSizearray = sizeData.Split(new char[] { 'x' });
+
+                            foreach (var singlesizePart in singleSizearray)
+                            {
+                                if (singlesizePart.Contains("\""))
+                                {
+                                    var temp = singlesizePart.Replace("\"", "");
+
+                                    double tempInt = 0d;
+
+                                    double.TryParse(temp, out tempInt);
+
+                                    tempInt = Convert.ToDouble(tempInt * 25.4);
+                                    finalSize += tempInt + "x";
+                                }
+                                else
+                                {
+                                    finalSize += singlesizePart + "x";
+                                }
+
+                            }
+
+                            if (finalSize.EndsWith("x"))
+                            {
+                                finalSize = finalSize.Remove(finalSize.LastIndexOf("x"), 1);
+                            }
+
+                            finalSize += ",";
+                        }
+
+                        finalSize = finalSize.Replace(" ", "");
+                        finalSize = finalSize.Replace("mm", "");
+
+                        if (finalSize.EndsWith(","))
+                            finalSize = finalSize.Remove(finalSize.LastIndexOf(","), 1);
+
+                        sizes = finalSize;
+                    }
                     var colours = row["Colours".ToLower()];
                     var weeksLimitReq = row["Weeks Limit Req.".ToLower()];
                     var WeeksLeft = "0";
