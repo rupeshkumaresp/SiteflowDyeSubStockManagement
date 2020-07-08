@@ -84,7 +84,7 @@
             // 
             this.lblStatusDownload.AutoSize = true;
             this.lblStatusDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusDownload.ForeColor = System.Drawing.Color.Lime;
+            this.lblStatusDownload.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblStatusDownload.Location = new System.Drawing.Point(24, 189);
             this.lblStatusDownload.Name = "lblStatusDownload";
             this.lblStatusDownload.Size = new System.Drawing.Size(0, 17);
@@ -140,7 +140,7 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.Lime;
+            this.lblStatus.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblStatus.Location = new System.Drawing.Point(6, 223);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(0, 17);
