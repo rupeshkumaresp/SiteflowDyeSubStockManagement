@@ -144,7 +144,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                            OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -153,7 +153,10 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
+
+            if(stock.Stock_Type=="Component")
+                worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#c4aded"));
 
             column++;
 
@@ -162,7 +165,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -171,7 +174,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -180,7 +183,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -190,7 +193,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -199,7 +202,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -217,7 +220,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -236,7 +239,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             if (Convert.ToBoolean(stock.LiveStockCellRed))
             {
@@ -250,7 +253,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -259,7 +262,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -295,7 +298,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -304,7 +307,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -313,7 +316,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK3);
@@ -321,7 +324,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -330,7 +333,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -339,7 +342,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -348,7 +351,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -357,7 +360,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -366,7 +369,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -375,7 +378,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -384,7 +387,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -393,7 +396,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -402,7 +405,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -411,7 +414,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -420,7 +423,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -429,7 +432,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -438,7 +441,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -447,7 +450,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -456,7 +459,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -465,7 +468,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -474,7 +477,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -484,7 +487,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK22);
@@ -492,7 +495,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK23);
@@ -500,7 +503,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK24);
@@ -508,7 +511,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK25);
@@ -516,7 +519,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK26);
@@ -524,7 +527,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK27);
@@ -532,7 +535,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK28);
@@ -540,7 +543,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK29);
@@ -548,7 +551,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK30);
@@ -556,7 +559,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK31);
@@ -564,7 +567,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK32);
@@ -572,7 +575,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK33);
@@ -580,7 +583,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK34);
@@ -588,7 +591,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK35);
@@ -596,7 +599,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK36);
@@ -604,7 +607,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK37);
@@ -612,7 +615,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK38);
@@ -620,7 +623,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK39);
@@ -628,7 +631,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK40);
@@ -636,7 +639,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK41);
@@ -644,7 +647,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK42);
@@ -652,7 +655,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK43);
@@ -660,7 +663,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK44);
@@ -668,7 +671,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK45);
@@ -676,7 +679,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK46);
@@ -684,7 +687,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK47);
@@ -692,7 +695,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK48);
@@ -700,7 +703,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK49);
@@ -708,7 +711,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK50);
@@ -716,7 +719,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
             worksheet.Cells[rowJump, column].Value = Convert.ToString(stock.WK51);
@@ -724,7 +727,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -733,7 +736,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -743,7 +746,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -752,7 +755,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -788,7 +791,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.MediumPurple);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#e1d7f7"));
 
             column++;
 
@@ -798,7 +801,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -807,7 +810,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -816,7 +819,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -825,7 +828,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -834,7 +837,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -843,7 +846,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -853,7 +856,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -862,7 +865,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -871,7 +874,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
@@ -880,7 +883,7 @@ namespace nsDyeSubStockManagement
             worksheet.Cells[rowJump, column].Style.Border.BorderAround(
                 OfficeOpenXml.Style.ExcelBorderStyle.Thin, System.Drawing.Color.Black);
             worksheet.Cells[rowJump, column].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.SkyBlue);
+            worksheet.Cells[rowJump, column].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#d8f1fa"));
 
             column++;
 
