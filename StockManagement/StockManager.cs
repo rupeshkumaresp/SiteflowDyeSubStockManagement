@@ -518,7 +518,7 @@ namespace nsDyeSubStockManagement
             return finalSize;
         }
 
-        private static void GetWeekMax(tDyeSubStocksV2 dyeSubStock, int currentWeek)
+        private void GetWeekMax(tDyeSubStocksV2 dyeSubStock, int currentWeek)
         {
             List<int> weekList = new List<int>();
             weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK1) ? 0 : Convert.ToInt32(dyeSubStock.WK1));
@@ -584,13 +584,13 @@ namespace nsDyeSubStockManagement
             dyeSubStock.Yearly_Total = Convert.ToString(weekList.Sum());
             dyeSubStock.Highest_Week = Convert.ToString(max);
 
-            decimal sum_4_Weeks_by_4 = 1;
+            int sum_4_Weeks_by_4 = 1;
 
             List<int> last4WeekData = new List<int>();
 
             for (int i = weekList.Count - 1; i > 1; i--)
             {
-                if (i + 1 <= currentWeek)
+                if (i + 1 < currentWeek)
                 {
                     last4WeekData.Add(weekList[i]);
                     if (last4WeekData.Count == 4)
@@ -601,9 +601,13 @@ namespace nsDyeSubStockManagement
 
             if (last4WeekData.Count > 0 && last4WeekData.Sum() > 0 && !string.IsNullOrEmpty(dyeSubStock.Weeks_Limit_Req_) && !string.IsNullOrEmpty(dyeSubStock.Live_Stock))
             {
-                sum_4_Weeks_by_4 = last4WeekData.Sum() / last4WeekData.Count;
+                sum_4_Weeks_by_4 = Convert.ToInt32(last4WeekData.Sum()) / last4WeekData.Count;
 
-                dyeSubStock.Weeks_Left = Convert.ToString(Convert.ToInt32(Convert.ToInt32(dyeSubStock.Live_Stock) / sum_4_Weeks_by_4));
+                if (sum_4_Weeks_by_4 > 0)
+                {
+                    dyeSubStock.Weeks_Left =
+                        Convert.ToString(Convert.ToInt32(Convert.ToDouble(dyeSubStock.Live_Stock) / sum_4_Weeks_by_4));
+                }
 
                 if ((Convert.ToInt32(dyeSubStock.Weeks_Limit_Req_) * sum_4_Weeks_by_4) -
                     Convert.ToInt32(dyeSubStock.Live_Stock) > 0)
@@ -614,8 +618,8 @@ namespace nsDyeSubStockManagement
                 {
                     dyeSubStock.LiveStockCellRed = false;
                 }
-            }
 
+            }
 
             var valueofStock = 0m;
 
@@ -634,6 +638,8 @@ namespace nsDyeSubStockManagement
                 dyeSubStock.Value_of_Stock_in_House = Convert.ToString(valueofStock);
 
             }
+
+            ctx.SaveChanges();
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
