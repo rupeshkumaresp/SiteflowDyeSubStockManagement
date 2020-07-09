@@ -520,63 +520,63 @@ namespace nsDyeSubStockManagement
 
         private void GetWeekMax(tDyeSubStocksV2 dyeSubStock, int currentWeek)
         {
-            List<int> weekList = new List<int>();
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK1) ? 0 : Convert.ToInt32(dyeSubStock.WK1));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK2) ? 0 : Convert.ToInt32(dyeSubStock.WK2));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK3) ? 0 : Convert.ToInt32(dyeSubStock.WK3));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK4) ? 0 : Convert.ToInt32(dyeSubStock.WK4));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK5) ? 0 : Convert.ToInt32(dyeSubStock.WK5));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK6) ? 0 : Convert.ToInt32(dyeSubStock.WK6));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK7) ? 0 : Convert.ToInt32(dyeSubStock.WK7));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK8) ? 0 : Convert.ToInt32(dyeSubStock.WK8));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK9) ? 0 : Convert.ToInt32(dyeSubStock.WK9));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK10) ? 0 : Convert.ToInt32(dyeSubStock.WK10));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK11) ? 0 : Convert.ToInt32(dyeSubStock.WK11));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK12) ? 0 : Convert.ToInt32(dyeSubStock.WK12));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK13) ? 0 : Convert.ToInt32(dyeSubStock.WK13));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK14) ? 0 : Convert.ToInt32(dyeSubStock.WK14));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK15) ? 0 : Convert.ToInt32(dyeSubStock.WK15));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK16) ? 0 : Convert.ToInt32(dyeSubStock.WK16));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK17) ? 0 : Convert.ToInt32(dyeSubStock.WK17));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK18) ? 0 : Convert.ToInt32(dyeSubStock.WK18));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK19) ? 0 : Convert.ToInt32(dyeSubStock.WK19));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK20) ? 0 : Convert.ToInt32(dyeSubStock.WK20));
+            List<double> weekList = new List<double>();
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK1) ? 0 : Convert.ToDouble(dyeSubStock.WK1));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK2) ? 0 : Convert.ToDouble(dyeSubStock.WK2));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK3) ? 0 : Convert.ToDouble(dyeSubStock.WK3));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK4) ? 0 : Convert.ToDouble(dyeSubStock.WK4));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK5) ? 0 : Convert.ToDouble(dyeSubStock.WK5));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK6) ? 0 : Convert.ToDouble(dyeSubStock.WK6));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK7) ? 0 : Convert.ToDouble(dyeSubStock.WK7));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK8) ? 0 : Convert.ToDouble(dyeSubStock.WK8));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK9) ? 0 : Convert.ToDouble(dyeSubStock.WK9));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK10) ? 0 : Convert.ToDouble(dyeSubStock.WK10));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK11) ? 0 : Convert.ToDouble(dyeSubStock.WK11));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK12) ? 0 : Convert.ToDouble(dyeSubStock.WK12));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK13) ? 0 : Convert.ToDouble(dyeSubStock.WK13));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK14) ? 0 : Convert.ToDouble(dyeSubStock.WK14));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK15) ? 0 : Convert.ToDouble(dyeSubStock.WK15));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK16) ? 0 : Convert.ToDouble(dyeSubStock.WK16));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK17) ? 0 : Convert.ToDouble(dyeSubStock.WK17));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK18) ? 0 : Convert.ToDouble(dyeSubStock.WK18));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK19) ? 0 : Convert.ToDouble(dyeSubStock.WK19));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK20) ? 0 : Convert.ToDouble(dyeSubStock.WK20));
 
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK21) ? 0 : Convert.ToInt32(dyeSubStock.WK21));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK22) ? 0 : Convert.ToInt32(dyeSubStock.WK22));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK23) ? 0 : Convert.ToInt32(dyeSubStock.WK23));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK24) ? 0 : Convert.ToInt32(dyeSubStock.WK24));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK25) ? 0 : Convert.ToInt32(dyeSubStock.WK25));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK26) ? 0 : Convert.ToInt32(dyeSubStock.WK26));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK27) ? 0 : Convert.ToInt32(dyeSubStock.WK27));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK28) ? 0 : Convert.ToInt32(dyeSubStock.WK28));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK29) ? 0 : Convert.ToInt32(dyeSubStock.WK29));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK30) ? 0 : Convert.ToInt32(dyeSubStock.WK30));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK21) ? 0 : Convert.ToDouble(dyeSubStock.WK21));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK22) ? 0 : Convert.ToDouble(dyeSubStock.WK22));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK23) ? 0 : Convert.ToDouble(dyeSubStock.WK23));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK24) ? 0 : Convert.ToDouble(dyeSubStock.WK24));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK25) ? 0 : Convert.ToDouble(dyeSubStock.WK25));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK26) ? 0 : Convert.ToDouble(dyeSubStock.WK26));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK27) ? 0 : Convert.ToDouble(dyeSubStock.WK27));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK28) ? 0 : Convert.ToDouble(dyeSubStock.WK28));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK29) ? 0 : Convert.ToDouble(dyeSubStock.WK29));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK30) ? 0 : Convert.ToDouble(dyeSubStock.WK30));
 
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK31) ? 0 : Convert.ToInt32(dyeSubStock.WK31));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK32) ? 0 : Convert.ToInt32(dyeSubStock.WK32));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK33) ? 0 : Convert.ToInt32(dyeSubStock.WK33));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK34) ? 0 : Convert.ToInt32(dyeSubStock.WK34));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK35) ? 0 : Convert.ToInt32(dyeSubStock.WK35));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK36) ? 0 : Convert.ToInt32(dyeSubStock.WK36));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK37) ? 0 : Convert.ToInt32(dyeSubStock.WK37));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK38) ? 0 : Convert.ToInt32(dyeSubStock.WK38));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK39) ? 0 : Convert.ToInt32(dyeSubStock.WK39));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK40) ? 0 : Convert.ToInt32(dyeSubStock.WK40));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK31) ? 0 : Convert.ToDouble(dyeSubStock.WK31));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK32) ? 0 : Convert.ToDouble(dyeSubStock.WK32));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK33) ? 0 : Convert.ToDouble(dyeSubStock.WK33));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK34) ? 0 : Convert.ToDouble(dyeSubStock.WK34));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK35) ? 0 : Convert.ToDouble(dyeSubStock.WK35));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK36) ? 0 : Convert.ToDouble(dyeSubStock.WK36));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK37) ? 0 : Convert.ToDouble(dyeSubStock.WK37));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK38) ? 0 : Convert.ToDouble(dyeSubStock.WK38));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK39) ? 0 : Convert.ToDouble(dyeSubStock.WK39));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK40) ? 0 : Convert.ToDouble(dyeSubStock.WK40));
 
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK41) ? 0 : Convert.ToInt32(dyeSubStock.WK41));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK42) ? 0 : Convert.ToInt32(dyeSubStock.WK42));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK43) ? 0 : Convert.ToInt32(dyeSubStock.WK43));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK44) ? 0 : Convert.ToInt32(dyeSubStock.WK44));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK45) ? 0 : Convert.ToInt32(dyeSubStock.WK45));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK46) ? 0 : Convert.ToInt32(dyeSubStock.WK46));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK47) ? 0 : Convert.ToInt32(dyeSubStock.WK47));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK48) ? 0 : Convert.ToInt32(dyeSubStock.WK48));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK49) ? 0 : Convert.ToInt32(dyeSubStock.WK49));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK50) ? 0 : Convert.ToInt32(dyeSubStock.WK50));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK41) ? 0 : Convert.ToDouble(dyeSubStock.WK41));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK42) ? 0 : Convert.ToDouble(dyeSubStock.WK42));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK43) ? 0 : Convert.ToDouble(dyeSubStock.WK43));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK44) ? 0 : Convert.ToDouble(dyeSubStock.WK44));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK45) ? 0 : Convert.ToDouble(dyeSubStock.WK45));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK46) ? 0 : Convert.ToDouble(dyeSubStock.WK46));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK47) ? 0 : Convert.ToDouble(dyeSubStock.WK47));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK48) ? 0 : Convert.ToDouble(dyeSubStock.WK48));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK49) ? 0 : Convert.ToDouble(dyeSubStock.WK49));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK50) ? 0 : Convert.ToDouble(dyeSubStock.WK50));
 
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK51) ? 0 : Convert.ToInt32(dyeSubStock.WK51));
-            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK52) ? 0 : Convert.ToInt32(dyeSubStock.WK52));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK51) ? 0 : Convert.ToDouble(dyeSubStock.WK51));
+            weekList.Add(string.IsNullOrEmpty(dyeSubStock.WK52) ? 0 : Convert.ToDouble(dyeSubStock.WK52));
 
 
             var max = weekList.Max();
@@ -586,7 +586,7 @@ namespace nsDyeSubStockManagement
 
             int sum_4_Weeks_by_4 = 1;
 
-            List<int> last4WeekData = new List<int>();
+            List<double> last4WeekData = new List<double>();
 
             for (int i = weekList.Count - 1; i > 1; i--)
             {
@@ -609,8 +609,8 @@ namespace nsDyeSubStockManagement
                         Convert.ToString(Convert.ToInt32(Convert.ToDouble(dyeSubStock.Live_Stock) / sum_4_Weeks_by_4));
                 }
 
-                if ((Convert.ToInt32(dyeSubStock.Weeks_Limit_Req_) * sum_4_Weeks_by_4) -
-                    Convert.ToInt32(dyeSubStock.Live_Stock) > 0)
+                if ((Convert.ToDouble(dyeSubStock.Weeks_Limit_Req_) * sum_4_Weeks_by_4) -
+                    Convert.ToDouble(dyeSubStock.Live_Stock) > 0)
                 {
                     dyeSubStock.LiveStockCellRed = true;
                 }
@@ -639,7 +639,6 @@ namespace nsDyeSubStockManagement
 
             }
 
-            ctx.SaveChanges();
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
