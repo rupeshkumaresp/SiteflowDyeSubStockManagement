@@ -103,6 +103,21 @@ namespace nsDyeSubStockManagement
             worksheet.Column(73).Style.Locked = false;
             worksheet.Column(74).Style.Locked = false;
 
+
+            worksheet.Column(76).Style.Locked = false;
+            worksheet.Column(77).Style.Locked = false;
+            worksheet.Column(78).Style.Locked = false;
+            worksheet.Column(79).Style.Locked = false;
+
+            worksheet.Column(80).Style.Locked = false;
+            worksheet.Column(81).Style.Locked = false;
+            worksheet.Column(82).Style.Locked = false;
+            worksheet.Column(83).Style.Locked = false;
+            worksheet.Column(84).Style.Locked = false;
+            worksheet.Column(85).Style.Locked = false;
+
+
+
             worksheet.Protection.IsProtected = true;
 
             worksheet.View.FreezePanes(2, 1);
