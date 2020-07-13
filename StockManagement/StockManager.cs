@@ -13,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization.Configuration;
+using OfficeOpenXml.ConditionalFormatting.Contracts;
 
 namespace nsDyeSubStockManagement
 {
@@ -125,7 +126,7 @@ namespace nsDyeSubStockManagement
 
                 var data = ImportSpreadsheet.Import(_inputStream);
 
-                
+
                 foreach (var row in data)
                 {
                     var stockName = row["Stock Name".ToLower()];
@@ -224,7 +225,6 @@ namespace nsDyeSubStockManagement
                     var externalSupplier = row["External Supplier".ToLower()];
                     var unitCost = row["Unit Cost".ToLower()];
                     var valueOfStockInHouse = row["Value of Stock in House".ToLower()];
-
 
                     var Component1 = row["Component 1".ToLower()];
                     var Component1Qty = row["Component 1 Qty".ToLower()];
@@ -352,7 +352,6 @@ namespace nsDyeSubStockManagement
                         stock.Component_5 = Component5;
                         stock.Component_5_Qty = Component5Qty;
 
-
                     }
 
                     if (newStock)
@@ -370,7 +369,7 @@ namespace nsDyeSubStockManagement
 
                         if (conversion)
                         {
-                            if (stock.ESP_Stock == null)
+                            if (string.IsNullOrEmpty(stock.ESP_Stock))
                                 stock.ESP_Stock = Convert.ToString(AddToESPStock);
                             else
                                 stock.ESP_Stock = Convert.ToString(Convert.ToInt32(stock.ESP_Stock) + AddToESPStock);
@@ -480,10 +479,16 @@ namespace nsDyeSubStockManagement
             var finalSize = "";
             foreach (var sizeData in sizeArray)
             {
+                if (string.IsNullOrEmpty(sizeData))
+                    continue;
+
                 var singleSizearray = sizeData.Split(new char[] { 'x' });
 
                 foreach (var singlesizePart in singleSizearray)
                 {
+                    if (string.IsNullOrEmpty(singlesizePart))
+                        continue;
+
                     if (singlesizePart.Contains("\""))
                     {
                         var temp = singlesizePart.Replace("\"", "");
